@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'cotta';
+  src: url('../../public/fonts/cotta-free.otf') fromat('truetype');
+}
+
+@layer base {
+}
+
+@font-face {
+  font-family: 'rayken';
+  src: url('../fonts/Rayken-Free-BF64b20fc26f346.otf') fromat('truetype');
+}
+
+@font-face {
+  font-family: 'baunk';
+  src: url('../../public/fonts/Baunk.ttf') format('truetype');
+}
+
+body {
+  user-select: none;
+}
+
+/* input */
+
+.wave-group {
+  position: relative;
+}
+
+.wave-group .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  /* display: block; */
+  /* width: 200px; */
+
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+
+.wave-group .textarea {
+  @apply bg-red-400;
+  font-size: 16px;
+  /* padding: 10px 10px 15px 5px; */
+  /* display: block; */
+  /* width: 200px; */
+
+  border: none;
+  border-bottom: 1px solid #515151;
+  /* background: transparent; */
+}
+
+.wave-group .textarea:focus {
+  outline: none;
+}
+
+.wave-group .input:focus {
+  outline: none;
+}
+
+.wave-group .label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+
+.wave-group .input:focus ~ label .label-char,
+.wave-group .input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  /* color: #5264ae; */
+}
+
+.wave-group .bar {
+  position: relative;
+  display: block;
+  width: 630px;
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+  @apply bg-primary_custom;
+  content: '';
+  height: 1px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  /* background: #5264ae; */
+
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.wave-group .bar:before {
+  left: 50%;
+}
+
+.wave-group .bar:after {
+  right: 50%;
+}
+
+.wave-group .input:focus ~ .bar:before,
+.wave-group .input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* Send */
+
+/*bg*/
+/*txt*/
+/*success*/
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  top: 20px;
+  left: 20px;
+}
+
+.buttons button {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  /* margin: 20px; */
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.buttons button:before,
+.buttons button:after {
+  @apply bg-primary_custom;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:after {
+  left: 0;
+  bottom: 0;
+}
+
+.buttons button span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.buttons button span:before,
+.buttons button span:after {
+  @apply bg-primary_custom;
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 0;
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:after {
+  left: 0;
+  bottom: 0;
+}
+
+.buttons button p {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons button p:before,
+.buttons button p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
+}
+
+.buttons button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button p:after {
+  @apply text-primary_custom;
+  content: attr(data-text);
+  top: 150%;
+  /* color: #44d8a4; */
+}
+
+.buttons button:hover:before,
+.buttons button:hover:after {
+  width: 100%;
+}
+
+.buttons button:hover span {
+  z-index: 1;
+}
+
+.buttons button:hover span:before,
+.buttons button:hover span:after {
+  height: 100%;
+}
+
+.buttons button:hover p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.buttons button:hover p:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button.start {
+  @apply bg-primary_custom;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.buttons button.start p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.buttons button.start p:after {
+  color: white;
+  transition: all 0s ease;
+  content: attr(data-start);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: start 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes start {
+  from {
+    top: -50%;
+  }
+}
+
+.buttons button.start:hover:before,
+.buttons button.start:hover:after {
+  display: none;
+}
+
+.buttons button.start:hover span {
+  display: none;
+}
+
+.buttons button:active {
+  outline: none;
+  border: none;
+}
+
+.buttons button:focus {
+  outline: 0;
+}
+
+/* Contact Button */
+
+.contact_button {
+  @apply p-5 rounded-full cursor-pointer border-0 bg-white_ transition-all ease-in-out duration-500;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  font-size: 15px;
+}
+
+.contact_button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(233, 57%, 55%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(24, 37, 220) 0px 7px 29px 0px;
+}
+
+.contact_button:active {
+  letter-spacing: 3px;
+  background-color: hsl(233, 57%, 55%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(24, 60, 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
