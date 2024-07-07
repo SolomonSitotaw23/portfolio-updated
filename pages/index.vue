@@ -10,7 +10,7 @@ const closeModal = () => {
 </script>
 <template>
   <section
-    class="flex flex-col min-h-screen bg-primary_custom overflow-hidden relative min-w-screen justify-between"
+    class="flex border-8 border-primary_border flex-col min-h-screen bg-primary_custom overflow-hidden relative min-w-screen justify-between"
   >
     <Header />
     <div class="flex-grow flex flex-row items-stretch relative">
@@ -19,11 +19,21 @@ const closeModal = () => {
         class="w-16 flex flex-col flex-grow items-center justify-center text-white"
       >
         <ul class="flex gap-8 font-space-grotesk transform -rotate-90">
-          <li class="hover:underline">Home</li>
-          <li>About</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <NuxtLink to="/" active-class="active" class="menu__link">
+            <li class="">Home</li>
+          </NuxtLink>
+
+          <NuxtLink to="/skills" active-class="active" class="menu__link">
+            <li>Skills</li>
+          </NuxtLink>
+
+          <NuxtLink to="/about" active-class="active" class="menu__link">
+            <li>About</li>
+          </NuxtLink>
+
+          <NuxtLink to="/projects" active-class="active" class="menu__link">
+            <li>Projects</li>
+          </NuxtLink>
         </ul>
       </div>
       <!-- center -->
@@ -31,18 +41,20 @@ const closeModal = () => {
         <div
           class="rounded-full h-[500px] w-[500px] bg-[#002DB3] drop-shadow-glow self-center items-center flex justify-center absolute"
         >
-          <div class="flex flex-col">
+          <div class="flex flex-col relative">
             <span class="text-white_ text-3xl font-baunk">Hi all I'm </span>
             <span class="text-[13rem] font-baunk text-white_"> Solomon </span>
-            <span class="text-white_ text-3xl font-baunk self-end"
-              >Fullstack developer</span
+            <div
+              class="text-white_ text-[28px] font-baunk self-end absolute bottom-0 right-0 !z-50"
             >
+              <span>Fullstack developer</span>
+            </div>
           </div>
         </div>
-        <div class="w-1/3 h-full z-30">
+        <div class="w-1/3 h-full">
           <img
             src="../assets/images/me.png"
-            class="w-1/3 absolute -bottom-24 z-20"
+            class="w-1/3 absolute -bottom-24"
             alt=""
           />
           <div
@@ -55,14 +67,35 @@ const closeModal = () => {
         class="w-20 text-white_ flex flex-col flex-grow items-center justify-center"
       >
         <div class="flex gap-4 flex-col items-center">
-          <Icon name="uil:github" class="text-white_ text-3xl" />
-          <Icon name="icon-park-solid:gitlab" class="text-white_ text-3xl" />
-          <Icon name="fa6-brands:x-twitter" class="text-white_ text-3xl" />
-          <Icon
-            name="ant-design:codepen-outlined"
-            class="text-white_ text-3xl"
-          />
-          <Icon name="basil:linkedin-outline" class="text-white_ text-3xl" />
+          <div
+            class="bg-secondary flex items-center justify-center p-2 rounded-full"
+          >
+            <Icon name="uil:github" class="text-primary_custom text-3xl" />
+          </div>
+          <div
+            class="bg-secondary flex items-center justify-center p-2 rounded-full"
+          >
+            <Icon name="icon-park-solid:gitlab" class="text-white_ text-3xl" />
+          </div>
+
+          <div
+            class="bg-secondary flex items-center justify-center p-2 rounded-full"
+          >
+            <Icon name="fa6-brands:x-twitter" class="text-white_ text-3xl" />
+          </div>
+          <div
+            class="bg-secondary flex items-center justify-center p-2 rounded-full"
+          >
+            <Icon
+              name="ant-design:codepen-outlined"
+              class="text-white_ text-3xl"
+            />
+          </div>
+          <div
+            class="bg-secondary flex items-center justify-center p-2 rounded-full"
+          >
+            <Icon name="basil:linkedin-outline" class="text-white_ text-3xl" />
+          </div>
         </div>
       </div>
 

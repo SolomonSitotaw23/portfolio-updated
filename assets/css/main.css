@@ -314,7 +314,7 @@ body {
 
 .contact_button:hover {
   letter-spacing: 3px;
-  background-color: hsl(233, 57%, 55%);
+  background-color: hsl(231, 100%, 55%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(24, 37, 220) 0px 7px 29px 0px;
 }
@@ -323,7 +323,62 @@ body {
   letter-spacing: 3px;
   background-color: hsl(233, 57%, 55%);
   color: hsl(0, 0%, 100%);
-  box-shadow: rgb(24, 60, 220) 0px 0px 0px 0px;
+  box-shadow: rgb(7, 42, 201) 0px 0px 0px 0px;
   transform: translateY(10px);
   transition: 100ms;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+/* <main-style> ============================ */
+.menu__link {
+  color: #fff;
+  line-height: 2;
+  position: relative;
+}
+
+.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -0.25rem;
+  right: 0;
+  transition: right 0.4s, width 0.4s, left 0.4s;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* box style */
+
+.box {
+  @apply flex items-center justify-center transition-all duration-300 rounded-sm shadow-[1px_1px_0px_0px_#C6C4C6] bg-[#ECEAEA];
+}
+
+.box_multi {
+  @apply transition-all duration-300 rounded-sm shadow-[1px_1px_0px_0px_#C6C4C6] bg-[#ECEAEA];
+}
+
+/* SCROLL */
+
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  @apply bg-white_;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary;
+  /* outline: 1px solid slategrey; */
 }
