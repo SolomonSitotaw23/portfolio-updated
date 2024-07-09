@@ -33,9 +33,9 @@ const educations = [
 ];
 </script>
 <template>
-  <section class="min-h-dvh min-w-full flex">
+  <section class="min-h-dvh min-w-full flex font-space-grotesk">
     <div
-      class="w-1/2 text-white_ font-space-grotesk bg-primary_custom border-8 border-r-0 border-primary_border py-24 px-40"
+      class="w-1/2 text-white_ bg-primary_custom border-8 border-r-0 border-primary_border py-24 px-40"
     >
       <NuxtLink
         class="contact_button text-primary_custom absolute flex self-start items-start w-fit"
@@ -62,57 +62,63 @@ const educations = [
     <!-- right side -->
     <!-- class="w-1/2 py-24 px-40 bg-white_ border-8 border-white_border border-l-0 flex flex-row items-center justify-center overflow-x-scroll" -->
     <div
-      class="w-1/2 min-h-full flex flex-col gap-16 items-center justify-center px-20 bg-white_ border-8 border-white_border border-l-0"
+      class="w-1/2 min-h-full flex items-center justify-center px-20 bg-white_ border-8 border-white_border border-l-0 py-20"
     >
-      <h1 class="text-5xl font-space-grotesk font-bold uppercase tracking-wide">
-        Educations & trainings
-      </h1>
-      <div class="flow-root font-space-grotesk">
-        <ul role="list" class="-mb-8">
-          <li
-            v-for="(education, educationIdx) in educations"
-            :key="education.id"
-          >
-            <div class="relative pb-8">
-              <span
-                v-if="educationIdx !== educations.length - 1"
-                class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-primary_border"
-                aria-hidden="true"
-              />
-              <div class="relative flex items-start space-x-3">
-                <template v-if="education.type === 'comment'">
-                  <div class="relative">
-                    <div
-                      class="bg-primary_border rounded-full h-10 w-10 flex items-center justify-center"
-                    >
-                      <Icon
-                        :name="education.icon"
-                        class="flex items-center justify-center rounded-full text-white_ text-3xl ring-8 ring-white"
-                      />
-                    </div>
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <div>
-                      <div class="text-sm">
-                        <a
-                          :href="education.person.href"
-                          class="font-medium text-3xl text-gray-900"
-                          >{{ education.person.name }}</a
-                        >
+      <div
+        class="h-full overflow-y-scroll relative flex items-center justify-center flex-col gap-16"
+      >
+        <h1
+          class="text-5xl font-space-grotesk font-bold uppercase tracking-wide"
+        >
+          Educations & trainings
+        </h1>
+        <div class="flow-root font-space-grotesk">
+          <ul role="list" class="-mb-8">
+            <li
+              v-for="(education, educationIdx) in educations"
+              :key="education.id"
+            >
+              <div class="relative pb-8">
+                <span
+                  v-if="educationIdx !== educations.length - 1"
+                  class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-primary_border"
+                  aria-hidden="true"
+                />
+                <div class="relative flex items-start space-x-3">
+                  <template v-if="education.type === 'comment'">
+                    <div class="relative">
+                      <div
+                        class="bg-primary_border rounded-full h-10 w-10 flex items-center justify-center"
+                      >
+                        <Icon
+                          :name="education.icon"
+                          class="flex items-center justify-center rounded-full text-white_ text-3xl ring-8 ring-white"
+                        />
                       </div>
-                      <p class="mt-0.5 text-sm text-gray-500">
-                        {{ education.date }}
-                      </p>
                     </div>
-                    <div class="mt-2 text-sm text-gray-700">
-                      <p>{{ education.comment }}</p>
+                    <div class="min-w-0 flex-1">
+                      <div>
+                        <div class="text-sm">
+                          <a
+                            :href="education.person.href"
+                            class="font-medium text-3xl text-gray-900"
+                            >{{ education.person.name }}</a
+                          >
+                        </div>
+                        <p class="mt-0.5 text-sm text-gray-500">
+                          {{ education.date }}
+                        </p>
+                      </div>
+                      <div class="mt-2 text-sm text-gray-700">
+                        <p>{{ education.comment }}</p>
+                      </div>
                     </div>
-                  </div>
-                </template>
+                  </template>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

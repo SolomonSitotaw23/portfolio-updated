@@ -3,6 +3,7 @@ import { ref } from 'vue';
 const skills = ref([
   {
     title: 'Programming Languages',
+
     items: [
       {
         title: 'GO',
@@ -53,6 +54,7 @@ const skills = ref([
       {
         title: 'PostgreSQL',
         icon: 'akar-icons:postgresql-fill',
+        color: 'green',
       },
       {
         title: 'MongoDB',
@@ -102,6 +104,12 @@ const skills = ref([
     ],
   },
 ]);
+
+const currentSlide = ref(0);
+
+const slideTo = (val) => {
+  currentSlide.value = val;
+};
 </script>
 <template>
   <section class="min-h-dvh min-w-full flex">
@@ -131,59 +139,72 @@ const skills = ref([
     </div>
 
     <!-- right side -->
-    <!-- class="w-1/2 py-24 px-40 bg-white_ border-8 border-white_border border-l-0 flex flex-row items-center justify-center overflow-x-scroll" -->
-    <div class="w-1/2 min-h-full flex items-center justify-center">
-      <div class="flex items-center flex-col h-full">
-        <!-- v-model="currentSlide" -->
-        <Carousel
-          id="gallery"
-          :items-to-show="1"
-          :wrap-around="false"
-          :autoplay="3000"
-          class="h-full flex flex-col justify-center items-center"
-        >
-          <Slide
-            v-for="skill in skills"
-            :key="skill.title"
-            class="cursor-pointer min-h-full flex flex-col"
+    <div
+      class="w-1/2 min-h-full flex flex-col py-6 items-center justify-center bg-white_"
+    >
+      <Carousel
+        id="thumbnails"
+        :items-to-show="4"
+        :wrap-around="true"
+        v-model="currentSlide"
+        ref="carousel"
+        class="bg-green-300 crs"
+      >
+        <Slide v-for="(slide, index) in skills" :key="slide" class="crss">
+          <span
+            class="font-bold text-xs carousel__slide border p-2 flex items-center justify-center w-full border-primary_border"
+            @click="slideTo(index)"
           >
-            <span class="font-bold font-space-grotesk text-4xl">{{
-              skill.title
-            }}</span>
-            <div class="bg-blue py-24 sm:py-32">
-              <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            {{ slide.title }}
+          </span>
+        </Slide>
+      </Carousel>
+      <Carousel
+        id="gallery"
+        :items-to-show="1"
+        :wrap-around="false"
+        v-model="currentSlide"
+        class="flex flex-col h-full justify-center items-center"
+      >
+        <Slide
+          v-for="(skill, index) in skills"
+          :key="index"
+          class="cursor-pointer min-h-full flex flex-col"
+        >
+          <span class="font-bold font-space-grotesk text-4xl">{{
+            skill.title
+          }}</span>
+          <div class="bg-blue py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+              <div
+                class="-mx-6 grid grid-cols-2 gap-1 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3"
+              >
                 <div
-                  class="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-2xl md:grid-cols-3"
+                  v-for="item in skill.items"
+                  :key="item.title"
+                  class="bg-[#ECEAEA] shadow-[1px_1px_0px_0px_#C6C4C6] p-6 sm:p-10"
                 >
-                  <div
-                    v-for="item in skill.items"
-                    :key="item.title"
-                    class="bg-gray-400/5 p-6 sm:p-10"
-                  >
-                    <Icon
-                      class="text-5xl w-full object-contain"
-                      :name="item.icon"
-                      alt="Transistor"
-                    />
-                    <span class="font-space-grotesk font-bold">{{
-                      item.title
-                    }}</span>
-                  </div>
+                  <Icon
+                    class="text-5xl w-full object-contain"
+                    :name="item.icon"
+                    alt="Transistor"
+                  />
+                  <span class="font-space-grotesk font-bold">{{
+                    item.title
+                  }}</span>
                 </div>
               </div>
             </div>
-          </Slide>
-          <template #addons>
-            <Navigation
-              class="bg-primary_border rounded-full text-white_ hover:text-primary_custom hover:bg-white_ transition-all duration-200"
-            />
+          </div>
+        </Slide>
+        <template #addons>
+          <Navigation
+            class="bg-primary_border rounded-full text-white_ hover:text-primary_custom hover:bg-white_ transition-all duration-200"
+          />
 
-            <Pagination class="text-white_" />
-          </template>
-        </Carousel>
-        <!-- v-model="currentSlide" -->
-        <!--  -->
-      </div>
+          <Pagination class="" />
+        </template>
+      </Carousel>
     </div>
   </section>
 </template>

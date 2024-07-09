@@ -29,7 +29,7 @@ export default {
         white_: '#E8E6E6',
         white_border: '#DEDCDC',
         'title-blue': '#4D5BCE',
-        glow_blue: '#4D5BCE',
+        glow_blue: '#002DB3',
         button_active: '#FEA55F',
         button_bg: '#1C2B3A',
       },

@@ -67,34 +67,36 @@ const closeModal = () => {
         class="w-20 text-white_ flex flex-col flex-grow items-center justify-center"
       >
         <div class="flex gap-4 flex-col items-center">
-          <div
-            class="bg-secondary flex items-center justify-center p-2 rounded-full"
-          >
-            <Icon name="uil:github" class="text-primary_custom text-3xl" />
-          </div>
-          <div
-            class="bg-secondary flex items-center justify-center p-2 rounded-full"
-          >
-            <Icon name="icon-park-solid:gitlab" class="text-white_ text-3xl" />
-          </div>
-
-          <div
-            class="bg-secondary flex items-center justify-center p-2 rounded-full"
-          >
-            <Icon name="fa6-brands:x-twitter" class="text-white_ text-3xl" />
-          </div>
-          <div
-            class="bg-secondary flex items-center justify-center p-2 rounded-full"
-          >
+          <div class="social_link group">
             <Icon
-              name="ant-design:codepen-outlined"
-              class="text-white_ text-3xl"
+              name="dashicons:linkedin"
+              class="social_link_icon group-hover:text-white_"
             />
           </div>
-          <div
-            class="bg-secondary flex items-center justify-center p-2 rounded-full"
-          >
-            <Icon name="basil:linkedin-outline" class="text-white_ text-3xl" />
+          <div class="social_link group">
+            <Icon
+              name="uil:github"
+              class="social_link_icon group-hover:text-white_"
+            />
+          </div>
+          <div class="social_link group">
+            <Icon
+              name="icon-park-solid:gitlab"
+              class="social_link_icon group-hover:text-white_"
+            />
+          </div>
+
+          <div class="social_link group">
+            <Icon
+              name="fa6-brands:x-twitter"
+              class="social_link_icon group-hover:text-white_"
+            />
+          </div>
+          <div class="social_link group">
+            <Icon
+              name="ant-design:codepen-outlined"
+              class="social_link_icon group-hover:text-white_"
+            />
           </div>
         </div>
       </div>

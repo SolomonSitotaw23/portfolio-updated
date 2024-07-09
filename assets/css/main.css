@@ -382,3 +382,39 @@ a {
   @apply bg-secondary;
   /* outline: 1px solid slategrey; */
 }
+
+/*  */
+
+.social_link_icon {
+  @apply text-primary_custom text-2xl transition-all ease-in-out duration-500;
+}
+
+.social_link {
+  @apply flex items-center justify-center h-11 w-11  rounded-full cursor-pointer border-0 bg-white_ transition-all ease-in-out duration-500;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  font-size: 15px;
+}
+
+.social_link:hover {
+  letter-spacing: 3px;
+  background-color: hsl(231, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(24, 37, 220) 0px 7px 29px 0px;
+}
+
+.social_link:active {
+  letter-spacing: 3px;
+  background-color: hsl(233, 57%, 55%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(7, 42, 201) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+/* slider */
+.crss .carousel__slide--active {
+  @apply text-teal-600 text-3xl cursor-pointer;
+  /* opacity: 1;
+  transform: rotateY(0); */
+  /* text: blue;*/
+}
