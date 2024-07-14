@@ -1,15 +1,11 @@
 <script setup></script>
 
 <template>
-  <div
-    class="text-white_ w-full h-16 py-11 flex items-center justify-between px-14"
-  >
-    <img src="../public/image/logo.png" class="h-14" alt="" />
-
     <div
-      class="flex items-center justify-center border border-secondary px-5 py-3 text-white_"
+        class="text-white_ w-full md:h-16 hidden py-11 md:flex items-center justify-center lg:justify-between px-14"
     >
-      Download Cv
+        <NuxtImg src="/image/logo.png" class="h-14 hidden lg:flex" alt="" />
+
+        <Download />
     </div>
-  </div>
 </template>

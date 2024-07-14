@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   pages: true,
   css: ['assets/css/main.css'],
 
@@ -11,5 +11,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/icon', '@nuxt/fonts', 'vue3-carousel-nuxt'],
+  modules: ['@nuxt/icon', '@nuxt/fonts', 'vue3-carousel-nuxt', "@nuxt/image"],
 });
