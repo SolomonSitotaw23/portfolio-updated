@@ -13,11 +13,8 @@
     "@nuxt/fonts": "^0.7.1",
     "@nuxt/icon": "^1.0.0",
     "@nuxt/image": "^1.7.0",
-    "@studio-freight/lenis": "^1.0.42",
-    "gsap": "^3.12.5",
     "nuxt": "^3.12.2",
-    "vue": "latest",
-    "vue3-carousel-nuxt": "^1.1.2"
+    "vue": "latest"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
