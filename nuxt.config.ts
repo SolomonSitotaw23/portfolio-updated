@@ -11,5 +11,11 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/icon', '@nuxt/fonts', 'vue3-carousel-nuxt', "@nuxt/image"],
+  modules: [
+    '@nuxt/icon',
+    '@nuxt/fonts',
+    'vue3-carousel-nuxt',
+    '@nuxt/image',
+    'nuxt-splide',
+  ],
 });

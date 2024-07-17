@@ -1,17 +1,4 @@
 <script setup>
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
-
-const currentSlide = ref(0);
-
-const slideTo = (val) => {
-  console.log(val);
-  currentSlide.value = val;
-};
-
-const myCarousel = ref(null);
-
-console.log(myCarousel.data);
-
 import { ref } from 'vue';
 const skills = ref([
   {
@@ -117,6 +104,17 @@ const skills = ref([
     ],
   },
 ]);
+
+const currentSlide = ref(0);
+
+const slideTo = (val) => {
+  console.log(val);
+  currentSlide.value = val;
+};
+
+const myCarousel = ref(null);
+
+console.log(myCarousel.data);
 </script>
 <template>
   <section
@@ -191,19 +189,40 @@ const skills = ref([
 
     <!-- right side -->
     <div
-      class="lg:w-1/2 lg:min-h-full overflow-clip flex flex-col lg:py-6 items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
+      class="lg:w-1/2 lg:min-h-full flex flex-col lg:py-6 items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
     >
-      <Splide
-        :options="{
-          rewind: true,
-          type: 'fade',
-          pauseOnFocus: true,
-          keyboard: true,
-          autoplay: true,
-        }"
-        aria-label=""
+      <div>
+        <ul ref="carousel" class="flex gap-2 items-center lg:gap-7">
+          <li
+            v-for="(slide, index) in skills"
+            :key="slide"
+            :class="{ 'slide--active': currentSlide === index }"
+            class="lg:slide text-xs whitespace-nowrap py-1 px-1"
+            @click="slideTo(index)"
+          >
+            {{ slide.title }}
+          </li>
+        </ul>
+        <div class="h-[1px] bg-white_ mt-1">
+          <div
+            :style="{
+              width: `${((currentSlide + 1) * 100) / skills.length}%`,
+            }"
+            class="h-full bg-primary_custom transform-all duration-300"
+          ></div>
+        </div>
+      </div>
+      <Carousel
+        id="gallery"
+        :items-to-show="1"
+        :wrap-around="false"
+        :autoplay="4000"
+        :pauseAutoplayOnHover="true"
+        ref="myCarousel"
+        v-model="currentSlide"
+        class="flex flex-col h-full px-0 w-screen lg:w-full overflow-x-hidden justify-center items-center transform-all duration-200"
       >
-        <SplideSlide
+        <Slide
           v-for="(skill, index) in skills"
           :key="index"
           class="cursor-pointer flex flex-col items-center justify-center max-w-screen p-4"
@@ -215,7 +234,7 @@ const skills = ref([
           <div class="lg:py-24 py-8 carousel__item">
             <div class="md:mx-auto max-w-7xl md:px-6 lg:px-8">
               <div
-                class="-mx-6 grid grid-cols-2 gap-4 lg:bg-white_ lg:gap-1 overflow-hidden sm:rounded-2xl md:grid-cols-3"
+                class="-mx-6 grid grid-cols-2 gap-4 sm:bg-white_border lg:bg-white_ lg:gap-1 overflow-hidden sm:rounded-2xl md:grid-cols-3"
               >
                 <div
                   v-for="item in skill.items"
@@ -234,16 +253,15 @@ const skills = ref([
               </div>
             </div>
           </div>
-        </SplideSlide>
-      </Splide>
+        </Slide>
+        <template #addons>
+          <Navigation
+            class="hidden lg:flex bg-primary_border rounded-full text-white_ hover:text-primary_custom hover:bg-white_ transition-all duration-200"
+          />
 
-      <!-- Add the progress bar element -->
+          <Pagination class="" />
+        </template>
+      </Carousel>
     </div>
   </section>
 </template>
-
-<style>
-.splide__arrows {
-  @apply hidden md:flex;
-}
-</style>

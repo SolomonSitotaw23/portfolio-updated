@@ -25,6 +25,34 @@ body {
     user-select: none;
 }
 
+/* Sections */
+
+.section {
+    @apply min-h-dvh min-w-full flex flex-col lg:flex-row bg-primary_custom font-space-grotesk;
+}
+
+.back-button-wrappers {
+    @apply lg:w-1/2 text-white_ font-space-grotesk bg-primary_custom lg:border-8 border-r-0 border-primary_border lg:py-24 lg:px-40 px-8 flex flex-col gap-4;
+}
+
+.back-mobile {
+    @apply bg-white_ text-center w-28 px-[12px] py-[7.5px] relative  text-black font-semibold  mt-8 lg:hidden;
+}
+
+.back-mobile-icon-wrapper {
+    @apply bg-primary_custom text-white_ flex h-[26px] w-7 items-center justify-center absolute left-1 top-[4px]  z-10 duration-500 text-sm;
+}
+.back-lg {
+    @apply contact_button text-primary_custom absolute hidden lg:flex self-start items-start w-fit;
+}
+
+.left-wrapper {
+    @apply flex flex-col gap-4 justify-center h-full py-12;
+}
+
+.right-wrapper {
+    @apply lg:w-1/2 lg:py-24 py-20 px-8 lg:px-40 bg-white_ lg:border-8 border-white_border border-l-0 flex items-center justify-end;
+}
 /* input */
 
 .wave-group {
@@ -86,6 +114,7 @@ body {
 }
 
 .wave-group .bar {
+    @apply hidden lg:flex;
     position: relative;
     display: block;
     width: 630px;
