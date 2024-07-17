@@ -31,10 +31,10 @@ defineEmits(['open']);
           class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
         />
       </TransitionChild>
-
+      <!-- floating button -->
       <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div
-          class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0"
+          class="flex min-h-full items-end justify-center lg:p-4 text-center sm:items-center sm:p-0"
         >
           <TransitionChild
             as="template"
@@ -46,13 +46,19 @@ defineEmits(['open']);
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel
-              class="relative transform overflow-hidden rounded-lg bg-white max-h-[calc(100dvh-120px)] overflow-y-scroll p-2 text-left shadow-xl transition-all"
+              class="relative transform overflow-hidden lg:rounded-lg bg-white lg:max-h-[calc(100dvh-120px)] overflow-y-scroll lg:p-2 text-left shadow-xl transition-all"
             >
               <!-- slot -->
               <slot />
+              <!-- <div class="absolute bg-green-500">Hell</div> -->
             </DialogPanel>
           </TransitionChild>
         </div>
+      </div>
+      <div
+        class="fixed lg:absolute lg:top-0 bottom-4 left-4 z-50 bg-[#bb4855] text-white_ h-12 w-12 flex items-center justify-center rounded-full shadow-md"
+      >
+        <Icon @click="close" name="iconamoon:close-bold" class="text-2xl" />
       </div>
     </Dialog>
   </TransitionRoot>
