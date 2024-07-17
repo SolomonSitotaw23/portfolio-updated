@@ -10,7 +10,6 @@
       <span class="4xs:hidden">DEFAULT</span>
       <span class="hidden 4xs:inline-block 3xs:hidden">4XS</span>
       <span class="hidden 3xs:inline-block 2xs:hidden">3XS</span>
-
       <span class="hidden 2xs:inline-block xs:hidden">XXS</span>
       <span class="hidden xs:inline-block sm:hidden">XS</span>
       <span class="hidden sm:inline-block md:hidden">SM</span>
