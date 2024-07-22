@@ -2,8 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   pages: true,
-  css: ['assets/css/main.css'],
-
+  css: ["assets/css/main.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -12,10 +11,12 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxt/icon',
-    '@nuxt/fonts',
-    'vue3-carousel-nuxt',
-    '@nuxt/image',
-    'nuxt-splide',
+    "@nuxt/icon",
+    "@nuxt/fonts",
+    "@nuxt/image",
+    "nuxt-splide",
+    "@vee-validate/nuxt",
   ],
+
+  compatibilityDate: "2024-07-20",
 });

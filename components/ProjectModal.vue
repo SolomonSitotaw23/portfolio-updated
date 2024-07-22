@@ -1,23 +1,24 @@
 <template>
     <div
-        class="w-full font-space-grotesk pt-20 bg-white_ lg:min-w-[calc(100dvw-300px)] flex flex-col justify-center items-center px-8"
+        class="font-space-grotesk pt-20 bg-white_ lg:min-w-[calc(100dvw-300px)] flex flex-col justify-center items-center px-8 bg-green-400"
     >
         <div
             class="lg:max-w-[640px] w-full pb-20 h-full text-primary_custom flex justify-center"
         >
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col">
-                    <span class="text-xs mb-1 font-bold">BOUTIQUE </span>
-                    <span class="lg:text-[40px] text-[22px] font-bold"
-                        >WEB APP FOR HANDPICKED HOMES & SMALL HOTELS</span
+                    <span class="text-xs mb-1 font-bold"
+                        >Sponsord by mastercard foundation
+                    </span>
+                    <span class="lg:text-[40px] text-[22px] font-bold uppercase"
+                        >WEB APP FOR The Bridges Programme</span
                     >
                 </div>
                 <p class="lg:text-lg text-sm">
-                    In 2021 I embarked on a bold voyage with my co-founder Marc
-                    Blazer to reimagine the way short-term rentals are sold. We
-                    focused on building meaningful relationships with our hosts,
-                    serving an aspirational collection of properties and
-                    providing best-in-class customer service to our guests.
+                    BRIDGES is a five-year programme (2019-2024) working to
+                    support and create jobs and micro, small and medium
+                    enterprises by unlocking the job-creation potential of
+                    industrial parks and other big enterprises in Ethiopia
                 </p>
                 <!-- technologies: -->
                 <div class="flex gap-3 pt-3 text-[10px] font-bold">
@@ -45,9 +46,7 @@
             </div>
         </div>
         <div class="flex flex-col items-center gap-3">
-            <div
-                class="aspect-video overflow-hidden lg:w-[60dvw] w-screen bg-green-400"
-            >
+            <div class="aspect-video overflow-hidden lg:w-[60dvw]">
                 <NuxtImg
                     src="image/project_hero/hahu_jobs_primary.png"
                     class="w-full h-full"

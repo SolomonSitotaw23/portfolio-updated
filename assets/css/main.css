@@ -36,12 +36,13 @@ body {
 }
 
 .back-mobile {
-    @apply bg-white_ text-center w-28 px-[12px] py-[7.5px] relative  text-black font-semibold  mt-8 lg:hidden;
+    @apply bg-white_ text-center w-28 px-[12px] py-[7.5px] relative text-black font-semibold mt-8 lg:hidden;
 }
 
 .back-mobile-icon-wrapper {
-    @apply bg-primary_custom text-white_ flex h-[26px] w-7 items-center justify-center absolute left-1 top-[4px]  z-10 duration-500 text-sm;
+    @apply bg-primary_custom text-white_ flex h-[26px] w-7 items-center justify-center absolute left-1 top-[4px] z-10 duration-500 text-sm;
 }
+
 .back-lg {
     @apply contact_button text-primary_custom absolute hidden lg:flex self-start items-start w-fit;
 }
@@ -53,6 +54,7 @@ body {
 .right-wrapper {
     @apply lg:w-1/2 lg:py-24 py-20 px-8 lg:px-40 bg-white_ lg:border-8 border-white_border border-l-0 flex items-center justify-end;
 }
+
 /* input */
 
 .wave-group {
@@ -362,6 +364,7 @@ body {
 a {
     text-decoration: none;
 }
+
 /* <main-style> ============================ */
 .menu__link {
     color: #fff;
@@ -422,7 +425,7 @@ a {
 }
 
 .social_link {
-    @apply flex items-center justify-center h-11 w-11  rounded-full cursor-pointer border-0 bg-white_ transition-all ease-in-out duration-500;
+    @apply flex items-center justify-center h-11 w-11 rounded-full cursor-pointer border-0 bg-white_ transition-all ease-in-out duration-500;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     font-size: 15px;
 }
@@ -452,7 +455,7 @@ a {
 }
 
 .slide {
-    @apply flex items-center font-space-grotesk  font-bold justify-center p-2  w-52  cursor-pointer border-0 bg-white transition-all ease-in-out duration-500;
+    @apply flex items-center font-space-grotesk font-bold justify-center p-2 w-52 cursor-pointer border-0 bg-white transition-all ease-in-out duration-500;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     font-size: 15px;
 }
@@ -914,3 +917,5 @@ a {
     height: 100%;
     box-shadow: 0 0 200px rgb(0, 45, 179) inset;
 }
+
+/* Cursor */
