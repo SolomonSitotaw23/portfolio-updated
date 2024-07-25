@@ -64,14 +64,18 @@ const educations = [
                     >Fullstack developer
                 </span>
                 <h1 class="lg:text-[40px] text-2xl font-bold">
-                    AS A FULLSTACK DEVELOPER
+                    Hi, I'm Solomon Sitotaw'
                 </h1>
                 <p class="md:text-lg text-sm">
-                    I'm Solomon, a multi-award winning product designer based in
-                    Dembia. During my career I've had the privilege of creating
-                    experiences for clients including the New York Times and
-                    Google. I've also helped guide teams at Facebook and
-                    startups like Highfive and WeTransfer.
+                    a dedicated full-stack developer specializing in building
+                    robust applications using Go for back-end development and
+                    JavaScript frameworks like React and Vue for front-end
+                    experiences. I enjoy crafting efficient, scalable solutions
+                    that enhance user engagement and streamline functionality.
+                    With a strong focus on performance and clean code, I thrive
+                    on tackling complex challenges and continuously improving my
+                    skills in this ever-evolving tech landscape. Let’s
+                    collaborate to bring innovative ideas to life!
                 </p>
                 <!-- Skills Gained -->
             </div>

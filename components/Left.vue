@@ -6,11 +6,11 @@ const props = defineProps({
 
 <template>
     <div class="left-wrapper">
-        <span class="lg:text-base text-xs">{{ content.head }} </span>
-        <h1 class="lg:text-[40px] text-[22px] font-bold">
+        <span class="lg:text-base text-xs uppercase">{{ content.head }} </span>
+        <h1 class="lg:text-[40px] text-[22px] font-bold uppercase">
             {{ content.title }}
         </h1>
-        <p class="lg:text-lg text-sm">
+        <p class="lg:text-base text-sm">
             {{ content.description }}
         </p>
 

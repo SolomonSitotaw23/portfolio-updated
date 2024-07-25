@@ -22,10 +22,10 @@ const skills = ref([
 ]);
 
 const content = ref({
-    head: "SCIENCE & CREATIVITY",
-    title: " PRODUCT DESIGNER FRONT-END DEVELOPER TEAM LEADER",
+    head: "Client Collaborations & Impact",
+    title: "PROJECTS",
     description:
-        "I'm Solomon, a multi-award winning product designer based in Dembia.During my career I've had the privilege of creating experiences for including the New York Times and Google. I've also helped guide teams at Facebook and startups like Highfive and WeTransfer.",
+        "Explore my projects that demonstrate my expertise in front-end and back-end development. I've successfully collaborated with clients like Mastercard Foundation and First Consult on large-scale national and international projects, impacting over 1 million users. Each project showcases my skills in Vue, React, Golang, and Node.js, reflecting my commitment to quality and detail.",
 });
 </script>
 <template>
@@ -37,7 +37,8 @@ const content = ref({
             <BackLg />
             <Left :content="content">
                 <!-- Skills Gained -->
-                <Skills :skills="skills" />
+                <!-- <Skills :skills="skills" /> -->
+                clients
             </Left>
         </div>
 

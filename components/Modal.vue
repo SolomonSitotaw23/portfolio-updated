@@ -68,7 +68,7 @@ defineEmits(["open"]);
                 </div>
             </div>
             <div
-                class="fixed bottom-4 left-4 z-50 bg-[#bb4855] text-white_ h-12 w-12 flex items-center justify-center rounded-full shadow-md md:hidden"
+                class="fixed bottom-4 left-4 z-50 bg-[#bb4855] text-white_ h-12 w-12 flex items-center justify-center rounded-full shadow-md lg:hidden"
             >
                 <Icon
                     @click="close"

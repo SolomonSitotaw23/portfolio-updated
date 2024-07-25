@@ -153,15 +153,14 @@ const skills = ref([
                     AS A FULLSTACK DEVELOPER
                 </h1>
                 <p class="md:text-lg text-sm">
-                    I'm Solomon, a multi-award winning product designer based in
-                    Dembia. During my career I've had the privilege of creating
-                    experiences for clients including the New York Times and
-                    Google. I've also helped guide teams at Facebook and
-                    startups like Highfive and WeTransfer.
+                    Showcasing my expertise in both front-end and back-end
+                    development, I specialize in technologies like Vue, React,
+                    Golang, and Node.js. With a keen eye for detail, I strive to
+                    create seamless and efficient user experiences.
                 </p>
                 <!-- Skills Gained -->
 
-                <div class="flex gap-3 pt-3 text-xs w-full flex-wrap">
+                <!-- <div class="flex gap-3 pt-3 text-xs w-full flex-wrap">
                     <span
                         class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
                         >AWS</span
@@ -194,6 +193,57 @@ const skills = ref([
                         class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
                         >Nuxt</span
                     >
+                </div> -->
+
+                <span class="uppercase font-bold underline pb-2">
+                    some tools I use</span
+                >
+                <div class="slider w-10/12">
+                    <div class="slide-track2">
+                        <Icon
+                            name="vscode-icons:file-type-tailwind"
+                            class="mslide text-base"
+                        />
+                        <Icon name="logos:nats-icon" class="mslide text-base" />
+                        <Icon
+                            name="vscode-icons:file-type-docker2"
+                            class="mslide text-base"
+                        />
+                        <Icon name="logos:nginx" class="mslide text-base" />
+                        <Icon name="logos:git-icon" class="mslide text-base" />
+
+                        <Icon name="devicon:linux" class="mslide text-base" />
+                        <Icon
+                            name="simple-icons:zedindustries"
+                            class="mslide text-base"
+                        />
+                        <Icon
+                            name="logos:sendgrid-iconn"
+                            class="mslide text-base"
+                        />
+
+                        <Icon
+                            name="skill-icons:aws-light"
+                            class="mslide text-base"
+                        />
+
+                        <Icon
+                            name="fa6-brands:cc-stripe"
+                            class="mslide text-base"
+                        />
+
+                        <Icon name="logos:pinia" class="mslide text-base" />
+                        <Icon
+                            name="skill-icons:redux"
+                            class="mslide text-base"
+                        />
+                        <Icon name="logos:gin" class="mslide text-base" />
+
+                        <Icon
+                            name="skill-icons:graphql-light"
+                            class="mslide text-base"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
