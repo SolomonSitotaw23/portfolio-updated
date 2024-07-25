@@ -97,37 +97,45 @@ const closeModal = () => {
                 class="w-20 text-white_ md:flex flex-col flex-grow items-center justify-center hidden"
             >
                 <div class="flex gap-4 flex-col items-center">
-                    <div class="social_link group">
+                    <NuxtLink
+                        to="https://www.linkedin.com/in/solomonsitotaw/"
+                        class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#0A66C2] hover:after:bg-[#0A66C2] group"
+                    >
                         <Icon
                             name="dashicons:linkedin"
-                            class="social_link_icon group-hover:text-white_"
+                            class="text-xl group-hover:text-white_"
                         />
-                    </div>
-                    <div class="social_link group">
+                    </NuxtLink>
+
+                    <NuxtLink
+                        to="https://github.com/SolomonSitotaw23"
+                        class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#010409] hover:after:bg-[#010409] group"
+                    >
                         <Icon
                             name="uil:github"
-                            class="social_link_icon group-hover:text-white_"
+                            class="text-xl group-hover:text-white_"
                         />
-                    </div>
-                    <div class="social_link group">
-                        <Icon
-                            name="icon-park-solid:gitlab"
-                            class="social_link_icon group-hover:text-white_"
-                        />
-                    </div>
+                    </NuxtLink>
 
-                    <div class="social_link group">
+                    <NuxtLink
+                        to="https://github.com/SolomonSitotaw23"
+                        class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#1D9BF0] hover:after:bg-[#1D9BF0] group"
+                    >
                         <Icon
                             name="fa6-brands:x-twitter"
-                            class="social_link_icon group-hover:text-white_"
+                            class="text-xl group-hover:text-white_"
                         />
-                    </div>
-                    <div class="social_link group">
+                    </NuxtLink>
+
+                    <NuxtLink
+                        to="https://mastodon.social/@solomon23"
+                        class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#2B90D9] hover:after:bg-[#2B90D9] group"
+                    >
                         <Icon
-                            name="ant-design:codepen-outlined"
-                            class="social_link_icon group-hover:text-white_"
+                            name="mingcute:mastodon-fill"
+                            class="text-xl group-hover:text-white_"
                         />
-                    </div>
+                    </NuxtLink>
                 </div>
             </div>
             <!--  -->
