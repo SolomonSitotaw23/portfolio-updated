@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import "@splidejs/vue-splide/css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -929,6 +931,7 @@ a {
     place-items: center;
     overflow: hidden;
 }
+
 .slider::before,
 .slider::after {
     position: absolute;
@@ -943,10 +946,12 @@ a {
     z-index: 2;
     pointer-events: none;
 }
+
 .slider::before {
     left: 0;
     top: 0;
 }
+
 .slider::after {
     right: 0;
     top: 0;
@@ -971,6 +976,7 @@ a {
     transition: 0.5s;
     cursor: pointer;
 }
+
 .mslide:hover {
     transform: scale(0.8);
 }
@@ -979,6 +985,7 @@ a {
     0% {
         transform: translateX(0px);
     }
+
     100% {
         transform: translateX(calc(-150px * 10));
     }
@@ -988,6 +995,7 @@ a {
     0% {
         transform: translateX(0px);
     }
+
     100% {
         transform: translateX(calc(-80px * 5));
     }
@@ -1010,6 +1018,7 @@ a {
         0% {
             transform: translateX(0px);
         }
+
         100% {
             transform: translateX(calc(-80px * 10));
         }
@@ -1019,6 +1028,7 @@ a {
         0% {
             transform: translateX(0px);
         }
+
         100% {
             transform: translateX(calc(-80px * 5));
         }
@@ -1073,4 +1083,9 @@ a {
 .cta_btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
+}
+
+.splide__progress__bar {
+    height: 3px;
+    background: #ccc;
 }

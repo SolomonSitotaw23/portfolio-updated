@@ -48,12 +48,13 @@ defineEmits(["open"]);
                         leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                     >
                         <div class="relative bg-blue-600">
+                            <!-- class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#0A66C2] hover:after:bg-[#0A66C2] group" -->
                             <div
-                                class="hidden group absolute z-40 -top-5 -right-5 bg-[#bb4855] h-12 w-12 rounded-full text-white lg:flex items-center justify-center shadow-md cursor-pointer"
+                                class="hidden group absolute z-40 -top-5 -right-5 bg-[#bb4855] h-12 w-12 rounded-full text-white lg:flex items-center justify-center shadow-md cursor-pointer hover:shadow-[0 10px 20px rgba(0, 0, 0, 0.2)] hover:scale-110 transform-all duration-200"
                                 @click="close"
                             >
                                 <Icon
-                                    name="iconamoon:close-bold  group-hover:animate-blurred-fade-in"
+                                    name="iconamoon:close-bold  "
                                     class="text-2xl"
                                 />
                             </div>

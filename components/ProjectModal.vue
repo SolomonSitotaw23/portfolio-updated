@@ -1,44 +1,10 @@
 <script setup>
-const features = ref([
-    {
-        title: " User Login System",
-        description:
-            "Secure login for partners, management, and administrators to report and manage impacts.",
+const props = defineProps({
+    project: {
+        type: Object,
+        required: true,
     },
-    {
-        title: "Impact Reporting Tool:",
-        description:
-            "A user-friendly interface for partners to report their respective impacts on job creation and MSME support.",
-    },
-    {
-        title: "Management Dashboard:",
-        description:
-            "An admin panel for the MEL Management team to oversee and approve reported impacts.",
-    },
-    {
-        title: "Responsive Design:",
-        description:
-            "Optimized for both desktop and mobile devices to ensure accessibility for all users.",
-    },
-]);
-
-const challenges = ref([
-    {
-        title: "Scalability",
-        description:
-            "Ensuring the application can handle a growing number of users and data as the program expands.",
-    },
-    {
-        title: "Data Security",
-        description:
-            "Implementing secure authentication and data protection measures to safeguard sensitive information.",
-    },
-    {
-        title: "Integration",
-        description:
-            "Seamlessly integrating various components (frontend, backend, database, and AWS services) to create a cohesive application.",
-    },
-]);
+});
 </script>
 
 <template>
@@ -51,65 +17,73 @@ const challenges = ref([
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col">
                     <span class="text-xs mb-1 font-bold"
-                        >Sponsord by mastercard foundation
+                        >{{ project.subtitle }}
                     </span>
-                    <span class="lg:text-[40px] text-[22px] font-bold uppercase"
-                        >WEB APP FOR The Bridges Programme</span
+                    <span
+                        class="lg:text-[40px] text-[22px] font-bold uppercase"
+                        >{{ project.title }}</span
                     >
                 </div>
-                <p class="lg:text-lg text-sm">
-                    BRIDGES is a comprehensive five-year program (2019-2024)
-                    aimed at fostering job creation and supporting micro, small,
-                    and medium enterprises (MSMEs) in Ethiopia. The initiative
-                    seeks to address the increasing labour force by creating
-                    productive employment opportunities for the youth and
-                    enhancing the operational capabilities of MSMEs.
-                </p>
+                <p class="lg:text-lg text-sm">{{ project.overview }}</p>
                 <!-- technologies: -->
                 <div class="flex gap-3 pt-3 text-[10px] font-bold">
                     <span
+                        v-for="tech in project.techs"
+                        :key="tech.title"
                         class="box lg:px-3 lg:py-2 px-[12px] py-[7.5px] uppercase"
-                        >AWS</span
-                    >
-                    <span
-                        class="box lg:px-3 lg:py-2 px-[12px] py-[7.5px] uppercase"
-                        >Docker</span
-                    >
-                    <span
-                        class="box lg:px-3 lg:py-2 px-[12px] py-[7.5px] uppercase"
-                        >Go</span
-                    >
-                    <span
-                        class="box lg:px-3 lg:py-2 px-[12px] py-[7.5px] uppercase"
-                        >Vue</span
+                        >{{ tech.title }}</span
                     >
                 </div>
             </div>
         </div>
-        <div class="flex flex-col items-center gap-3">
-            <div class="aspect-video overflow-hidden lg:w-[60dvw]">
+        <!-- Project Images -->
+
+        <Splide
+            :options="{
+                rewind: true,
+                pauseOnFocus: false,
+                keyboard: true,
+                autoplay: true,
+            }"
+            aria-label=""
+            class="flex flex-col items-center gap-3 lg:w-[60dvw]"
+        >
+            <SplideSlide
+                v-for="n in 3"
+                :key="n"
+                class="aspect-video overflow-hidden m-4"
+            >
                 <NuxtImg
                     src="image/project_hero/hahu_jobs_primary.png"
                     class="w-full h-full"
                 />
+            </SplideSlide>
+            <div class="splide__progress">
+                <div class="splide__progress__bar" />
             </div>
-            <span
-                class="uppercase text-[10px] font-bold text-primary_border tracking-[0.5em] font-space-grotesk"
-                >Sample Images</span
-            >
-        </div>
+
+            <button class="splide__toggle bg-green-900" type="button">
+                <span class="splide__toggle__play">Play</span>
+                <span class="splide__toggle__pause">Pause</span>
+            </button>
+        </Splide>
+
+        <span
+            class="uppercase text-[10px] font-bold text-primary_border tracking-[0.5em] font-space-grotesk"
+            >Sample Images</span
+        >
 
         <div
             class="lg:max-w-[640px] w-full py-20 h-full text-primary_custom flex flex-col gap-4 justify-center"
         >
-            <div class="w-full flex flex-col gap-4 pb-20">
+            <div class="w-full flex flex-col gap-4 pb-6">
                 <span class="lg:text-[40px] text-[22px] font-bold"
                     >Features</span
                 >
 
                 <ul class="flex flex-col gap-4">
                     <li
-                        v-for="feature in features"
+                        v-for="feature in project.features"
                         :key="feature.title"
                         class="flex flex-col"
                     >
@@ -128,14 +102,14 @@ const challenges = ref([
                         >Learning outcomes</span
                     >
                 </div>
-                <p class="lg:text-lg text-sm">
-                    Gained expertise in using Vue.js for building dynamic and
-                    responsive user interfaces. Enhanced skills in Go for
-                    developing robust backend services. Developed proficiency in
-                    deploying applications on AWS and managing cloud resources
-                    effectively. Learned to use Docker for containerization,
-                    improving deployment efficiency and consistency.
-                </p>
+                <div class="flex flex-col">
+                    <p
+                        v-for="learningOutcome in project.learining_outcomes"
+                        class="lg:text-lg text-sm font-thin"
+                    >
+                        {{ learningOutcome }}
+                    </p>
+                </div>
             </div>
             <div class="w-full flex flex-col gap-4 pb-20">
                 <span class="lg:text-[40px] text-[22px] font-bold"
@@ -144,7 +118,7 @@ const challenges = ref([
 
                 <ul class="flex flex-col gap-4">
                     <li
-                        v-for="challenge in challenges"
+                        v-for="challenge in project.challengesfaced"
                         :key="challenge.title"
                         class="flex flex-col"
                     >
@@ -160,13 +134,13 @@ const challenges = ref([
         </div>
         <div class="pb-10">
             <NuxtLink
-                to="https://nuxtjs.org"
-                class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-primary_custom hover:after:bg-primary_custom group"
+                :to="project.link"
+                class="cta_btn rounded-md p-1 px-8 w-fit h-14 flex items-center justify-center hover:bg-primary_custom hover:after:bg-primary_custom group"
             >
-                <Icon
-                    name="radix-icons:external-link"
-                    class="text-xl group-hover:text-white_"
-                />
+                <span class="group-hover:text-white_ flex items-center gap-2">
+                    Link
+                    <Icon name="radix-icons:external-link" class="text-base" />
+                </span>
             </NuxtLink>
         </div>
     </div>
