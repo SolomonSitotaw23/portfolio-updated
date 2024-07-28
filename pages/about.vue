@@ -4,6 +4,7 @@ import { ref } from "vue";
 const educations = [
     {
         id: 1,
+        title: "Education And Training",
         type: "comment",
         person: { name: "Bahirdar University", href: "#" },
         icon: "mdi:graduation-cap",
@@ -83,19 +84,17 @@ const educations = [
 
         <!-- right side -->
         <div
-            class="lg:w-1/2 md:min-h-full flex items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
+            class="lg:w-1/2 sm:min-h-screen flex items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
         >
             <Splide
                 :options="{
-                    // direction: 'ttb',
-                    height: '100vh', // heightRatio: 0.3, label: 'My Carousel' , wheel: true, keyboard: true, // padding: '1rem' ,
                     gap: '5rem',
                     wheel: true,
                     flickMaxPages: 1,
                     flickPower: 300,
                     wheelMinThreshold: 100,
                 }"
-                class="w-full md:px-20 md:py-20 px-8 bg-gradient-to-b from-white_ via-transparent to-white_"
+                class="w-full md:px-20 md:py-20 px-8 bg-gradient-to-b from-white_ via-transparent to-white_ min-h-screen py-6 flex items-center"
             >
                 <SplideSlide v-for="n in 10" :key="n">
                     <div

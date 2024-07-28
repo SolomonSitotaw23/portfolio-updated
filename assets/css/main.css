@@ -54,7 +54,7 @@ body {
 }
 
 .right-wrapper {
-    @apply lg:w-1/2 lg:py-24 py-20 px-8 lg:px-40 bg-white_ lg:border-8 border-white_border border-l-0 flex items-center justify-end;
+    @apply lg:w-1/2 lg:py-24 max-h-screen px-8 lg:px-40 bg-white_ lg:border-8 border-white_border border-l-0 flex items-center justify-end;
 }
 
 /* input */
@@ -1039,11 +1039,8 @@ a {
 
 .cta_btn {
     position: relative;
-    /* font-size: 17px; */
     text-transform: uppercase;
     text-decoration: none;
-    /* padding: 1em 2.5em; */
-    /* display: inline-block; */
     border-radius: 6em;
     transition: all 0.2s;
     border: none;
@@ -1088,4 +1085,21 @@ a {
 .splide__progress__bar {
     height: 3px;
     background: #ccc;
+}
+
+/* specific scroll bar */
+
+.scrollbar-custom::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+    height: 1px;
+    scroll-behavior: smooth;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #4a5568; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+    background: #edf2f7; /* Color of the scrollbar track */
 }

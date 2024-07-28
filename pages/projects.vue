@@ -95,7 +95,7 @@ const projectButtons = ref([
         </div>
 
         <!-- right side -->
-        <div class="right-wrapper">
+        <div class="right-wrapper flex-col gap-6">
             <div
                 class="w-full h-full lg:py-20 grid gird-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-6 lg:gap-12"
             >
@@ -113,15 +113,35 @@ const projectButtons = ref([
 
                 <!-- space holder -->
             </div>
+            <!-- <div class="w-full">
+                <div
+                    class="flex items-center gap-6 overflow-x-scroll scroll-m-0 overflow-y-hidden scrollbar-custom"
+                >
+                    <div
+                        v-for="n in 8"
+                        :key="n"
+                        class="p-2 min-w-20 h-20 overflow-hidden row-span-1 col-span-1 lg:col-start-2 box group hover:transform hover:scale-110"
+                    >
+                        <NuxtImg
+                            src="image/hahu.png"
+                            class="brightness-0 grayscale-0 group-hover:brightness-100 transform duration-300"
+                        />
+                    </div>
+                </div>
+            </div> -->
         </div>
 
         <div
             class="w-40 h-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-8 border-white_border bg-white_ hidden lg:flex items-center justify-center px-2"
         >
-            <NuxtImg
-                src="image/minab.webp"
-                class="filter brightness-0 grayscale group-hover:invert transition-all duration-200 max-h-10"
-            />
+            <div class="flex flex-col items-center">
+                <span
+                    class="text-7xl font-bold font-baunk flex items-center justify-center"
+                >
+                    11+
+                </span>
+                <span class="text-base uppercase font-baunk"> projects </span>
+            </div>
         </div>
 
         <Modal :isOpen="isModalOpened" @close="closeModal()">

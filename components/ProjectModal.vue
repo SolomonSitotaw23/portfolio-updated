@@ -9,13 +9,15 @@ const props = defineProps({
 
 <template>
     <div
-        class="font-space-grotesk pt-20 bg-white_ lg:min-w-[calc(100dvw-300px)] flex flex-col justify-center items-center px-8 bg-green-400"
+        class="font-space-grotesk pt-20 bg-white_ lg:min-w-[calc(100dvw-300px)] flex flex-col justify-center items-center px-8"
     >
         <div
             class="lg:max-w-[640px] w-full pb-20 h-full text-primary_custom flex justify-center"
         >
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col">
+                    <div class="w-7 h-1 mb-5 bg-primary_border"></div>
+
                     <span class="text-xs mb-1 font-bold"
                         >{{ project.subtitle }}
                     </span>
@@ -25,14 +27,37 @@ const props = defineProps({
                     >
                 </div>
                 <p class="lg:text-lg text-sm">{{ project.overview }}</p>
+                <div v-if="project.myRole" class="flex flex-col">
+                    <span class="lg:text-[40px] text-[22px] font-bold"
+                        >My Role</span
+                    >
+                    <span class="font-light">{{ project.myRole.title }}</span>
+                    <p class="pt-3">
+                        {{ project.myRole.description }}
+                    </p>
+                </div>
                 <!-- technologies: -->
-                <div class="flex gap-3 pt-3 text-[10px] font-bold">
+                <div class="flex gap-3 pt-3 text-[10px] font-bold flex-wrap">
                     <span
                         v-for="tech in project.techs"
                         :key="tech.title"
                         class="box lg:px-3 lg:py-2 px-[12px] py-[7.5px] uppercase"
                         >{{ tech.title }}</span
                     >
+                </div>
+                <div
+                    v-if="project.numberOfUsers.length > 0"
+                    class="w-full flex items-center px-20 py-6 gap-10"
+                >
+                    <div
+                        v-for="number in project.numberOfUsers"
+                        class="flex flex-col gap-3 items-center"
+                    >
+                        <span class="text-5xl font-bold">{{
+                            number.number
+                        }}</span>
+                        <span>{{ number.title }}</span>
+                    </div>
                 </div>
             </div>
         </div>
