@@ -1,37 +1,6 @@
 <script setup>
 import { ref } from "vue";
-
-const educations = [
-    {
-        id: 1,
-        title: "Education And Training",
-        type: "comment",
-        person: { name: "Bahirdar University", href: "#" },
-        icon: "mdi:graduation-cap",
-        comment:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ",
-        date: "01/09/2015 – 30/06/2019 – +251 11 888 0606, Addis Ababa, Ethiopia",
-    },
-    {
-        id: 5,
-        type: "comment",
-        person: { name: "Fullstack development Training", href: "#" },
-        icon: "material-symbols:developer-mode-tv-outline",
-        comment:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. ",
-        date: "01/09/2015 – 30/06/2019 – +251 11 888 0606, Addis Ababa, Ethiopia",
-    },
-
-    {
-        id: 4,
-        type: "comment",
-        person: { name: "Fasiledes Highschool", href: "#" },
-        icon: "teenyicons:school-solid",
-        comment:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam cursus quis sed purus nam. Scelerisque amet elit non sit ut tincidunt condimentum. Nisl ultrices eu venenatis diam.",
-        date: "01/09/2011 – 30/06/2015 – Mehal Meda, Ethiopia",
-    },
-];
+import { abouts } from "assets/datas/about.js";
 </script>
 <template>
     <section class="section !bg-white_ animate-fade-in">
@@ -84,7 +53,7 @@ const educations = [
 
         <!-- right side -->
         <div
-            class="lg:w-1/2 sm:min-h-screen flex items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
+            class="lg:w-1/2 sm:min-h-screen max-h-screen overflow-scroll flex items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
         >
             <Splide
                 :options="{
@@ -96,86 +65,72 @@ const educations = [
                 }"
                 class="w-full md:px-20 md:py-20 px-8 bg-gradient-to-b from-white_ via-transparent to-white_ min-h-screen py-6 flex items-center"
             >
-                <SplideSlide v-for="n in 10" :key="n">
+                <SplideSlide v-for="about in abouts" :key="about.id">
                     <div
-                        class="h-full relative flex items-center justify-center flex-col md:gap-16 gap-12"
+                        class="h-full w-full bg-green-100 relative flex items-start justify-start flex-col md:gap-16 gap-12"
                     >
                         <h1
                             class="lg:text-5xl text-3xl font-space-grotesk font-bold uppercase tracking-wide"
                         >
-                            Educations & trainings
+                            {{ about.title }}
                         </h1>
                         <div class="flow-root font-space-grotesk">
                             <ul role="list" class="-mb-8">
                                 <li
-                                    v-for="(
-                                        education, educationIdx
-                                    ) in educations"
-                                    :key="education.id"
+                                    v-for="(ab, aboutIdx) in about.data"
+                                    :key="ab.id"
                                 >
                                     <div class="relative pb-8">
                                         <span
-                                            v-if="
-                                                educationIdx !==
-                                                educations.length - 1
-                                            "
+                                            v-if="aboutIdx !== ab.length - 1"
                                             class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-primary_border"
                                             aria-hidden="true"
                                         />
                                         <div
                                             class="relative flex items-start space-x-3"
                                         >
-                                            <template
-                                                v-if="
-                                                    education.type === 'comment'
-                                                "
-                                            >
-                                                <div class="relative">
-                                                    <div
-                                                        class="bg-primary_border rounded-full h-10 w-10 flex items-center justify-center"
-                                                    >
-                                                        <Icon
-                                                            :name="
-                                                                education.icon
+                                            <div class="relative">
+                                                <div
+                                                    class="bg-primary_border rounded-full h-10 w-10 flex items-center justify-center"
+                                                >
+                                                    <Icon
+                                                        :name="ab.icon"
+                                                        class="flex items-center justify-center rounded-full text-white_ text-3xl ring-8 ring-white"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="min-w-0 flex-1">
+                                                <div>
+                                                    <div class="text-sm">
+                                                        <a
+                                                            :href="
+                                                                ab.company.href
                                                             "
-                                                            class="flex items-center justify-center rounded-full text-white_ text-3xl ring-8 ring-white"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div class="min-w-0 flex-1">
-                                                    <div>
-                                                        <div class="text-sm">
-                                                            <a
-                                                                :href="
-                                                                    education
-                                                                        .person
-                                                                        .href
-                                                                "
-                                                                class="font-medium text-2xl md:text-3xl text-gray-900"
-                                                                >{{
-                                                                    education
-                                                                        .person
-                                                                        .name
-                                                                }}</a
-                                                            >
-                                                        </div>
-                                                        <p
-                                                            class="mt-0.5 text-sm text-gray-500"
+                                                            class="font-medium text-2xl md:text-3xl text-gray-900"
+                                                            >{{
+                                                                ab.company.name
+                                                            }}</a
                                                         >
-                                                            {{ education.date }}
-                                                        </p>
                                                     </div>
-                                                    <div
-                                                        class="mt-2 text-sm text-gray-700"
+                                                    <span
+                                                        class="font-bold text-xl"
                                                     >
-                                                        <p>
-                                                            {{
-                                                                education.comment
-                                                            }}
-                                                        </p>
-                                                    </div>
+                                                        Fullstack developer
+                                                    </span>
+                                                    <p
+                                                        class="mt-0.5 text-sm text-gray-500"
+                                                    >
+                                                        {{ ab.date }}
+                                                    </p>
                                                 </div>
-                                            </template>
+                                                <div
+                                                    class="mt-2 text-sm text-gray-700"
+                                                >
+                                                    <p>
+                                                        {{ ab.skills }}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>

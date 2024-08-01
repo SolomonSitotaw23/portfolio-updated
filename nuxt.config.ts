@@ -16,7 +16,12 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-splide",
     "@vee-validate/nuxt",
+    "nuxt-anchorscroll",
+    "@hypernym/nuxt-anime",
   ],
+  anime: {
+    provide: true,
+  },
 
   compatibilityDate: "2024-07-20",
 });
