@@ -52,9 +52,11 @@ import { abouts } from "assets/datas/about.js";
         </div>
 
         <!-- right side -->
-        <div class="lg:w-1/2 lg:py-20 py-20 px-4 max-h-screen overflow-hidden">
+        <div
+            class="lg:border-8 border-white_border border-l-0 lg:w-1/2 lg:py-20 py-20 px-4 max-h-screen overflow-hidden sm:scrollbar-custom"
+        >
             <div
-                class="lg:px-20 h-[90vh] overflow-scroll w-full flex flex-col gap-6"
+                class="lg:px-20 h-[90vh] overflow-scroll w-full flex flex-col gap-6 sm:scrollbar-custom"
             >
                 <div v-for="about in abouts" class="">
                     <div

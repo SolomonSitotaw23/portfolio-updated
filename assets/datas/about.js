@@ -50,7 +50,7 @@ export const abouts = [
     ],
   },
   {
-    title: "educations and Training",
+    title: "educations and Trainings",
     data: [
       {
         id: 1,

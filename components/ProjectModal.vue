@@ -12,7 +12,7 @@ const props = defineProps({
         class="font-space-grotesk pt-20 bg-white_ lg:min-w-[calc(100dvw-300px)] flex flex-col justify-center items-center px-8"
     >
         <div
-            class="lg:max-w-[640px] w-full pb-20 h-full text-primary_custom flex justify-center"
+            class="lg:max-w-[640px] max-w-screen pb-20 h-full text-primary_custom flex justify-center"
         >
             <div class="flex flex-col gap-4">
                 <div class="flex flex-col">
@@ -47,16 +47,18 @@ const props = defineProps({
                 </div>
                 <div
                     v-if="project.numberOfUsers.length > 0"
-                    class="w-full flex items-center px-20 py-6 gap-10"
+                    class="flex items-center lg:px-20 lg:py-6 py-4 gap-10"
                 >
                     <div
                         v-for="number in project.numberOfUsers"
-                        class="flex flex-col gap-3 items-center"
+                        class="flex flex-col lg:gap-3 gap-2 items-center justify-center w-full"
                     >
-                        <span class="text-5xl font-bold">{{
+                        <span class="lg:text-5xl text-4xl font-bold">{{
                             number.number
                         }}</span>
-                        <span>{{ number.title }}</span>
+                        <span class="whitespace-nowrap">{{
+                            number.title
+                        }}</span>
                     </div>
                 </div>
             </div>
@@ -87,7 +89,7 @@ const props = defineProps({
                 <div class="splide__progress__bar" />
             </div>
 
-            <button class="splide__toggle bg-green-900" type="button">
+            <button class="splide__toggle" type="button">
                 <span class="splide__toggle__play">Play</span>
                 <span class="splide__toggle__pause">Pause</span>
             </button>
