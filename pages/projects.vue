@@ -1,5 +1,5 @@
 <script setup>
-import { projects, projectBData } from 'assets/datas/projects.js';
+import { projects } from 'assets/datas/projects.js';
 
 const projectButtons = ref([
   {
@@ -84,20 +84,65 @@ const handleClick = (value) => {
   openModal();
 };
 
-console.log(projectButtons);
+const anime = useNuxtApp().$anime;
+
+onMounted(() => {
+  console.log('projects mounted');
+  anime({
+    targets: '.right_side',
+    width: '100%',
+    duration: 4000,
+    easing: 'easeOutElastic(1,.8)',
+  });
+
+  //overlay layer animation
+  anime({
+    targets: '.overlay',
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+    width: ['100%', '0%'],
+    duration: 3000,
+    autoplay: true,
+  });
+  anime({
+    targets: '.number_of_projects',
+    opacity: [0, 1],
+    duration: 3000,
+    easing: 'cubicBezier(.5, .05, .1, .3)',
+  });
+  anime({
+    targets: '.group__project',
+    opacity: [0, 1],
+    translateY: [100, 0],
+    delay: anime.stagger(200),
+    duration: 2000,
+    easing: 'easeInElastic(1,.8)',
+  });
+
+  anime({
+    targets: '.left_side',
+    opacity: [0, 1],
+    translateY: [100, 0],
+    delay: anime.stagger(200),
+    duration: 2000,
+    easing: 'easeInElastic(1,.8)',
+  });
+});
 </script>
 <template>
-  <section class="section">
+  <section class="section relative">
     <!-- backbutton wrappers -->
     <div class="back-button-wrappers">
       <!-- mobile Back -->
       <BackMobile />
       <BackLg />
-      <Left :content="content"> clients </Left>
+      <Left :content="content" class="left_side"> clients </Left>
     </div>
 
     <!-- right side -->
-    <div class="lg:w-1/2 bg-white_ flex-col gap-6 max-h-screen">
+    <div class="lg:w-1/2 bg-white_ flex-col gap-6 max-h-screen relative">
+      <div
+        class="absolute w-full h-full z-[1] left-0 bg-primary_custom overlay"
+      ></div>
       <div
         class="h-full max-h-screen px-8 lg:px-40 lg:border-8 border-white_border border-l-0 overflow-scroll lg:py-20 py-10 grid gird-cols-2 lg:grid-cols-3 gap-6 lg:gap-12"
         v-if="projectButtons"
@@ -107,7 +152,7 @@ console.log(projectButtons);
           v-for="(projectButton, index) in projectButtons"
           :key="index"
           @click="handleClick(projects[index])"
-          :class="projectButton.divClass"
+          :class="projectButton.divClass + ' group__project'"
         >
           <NuxtImg
             :src="projectButton.imageSrc"
@@ -120,7 +165,7 @@ console.log(projectButtons);
     </div>
 
     <div
-      class="w-40 h-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-8 border-white_border bg-white_ hidden lg:flex items-center justify-center px-2"
+      class="w-40 h-40 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-8 border-white_border bg-white_ hidden lg:flex items-center justify-center px-2 number_of_projects"
     >
       <div class="flex flex-col items-center">
         <span

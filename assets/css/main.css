@@ -34,7 +34,7 @@ body {
 }
 
 .back-button-wrappers {
-  @apply lg:w-1/2 text-white_ font-space-grotesk bg-primary_custom lg:border-8 border-r-0 border-primary_border lg:py-24 lg:px-40 px-8 flex flex-col gap-4;
+  @apply lg:w-1/2 text-white_ font-space-grotesk bg-primary_custom lg:border-t-8 lg:border-b-8 lg:border-l-8 lg:border-r-0 border-primary_border lg:py-24 lg:px-40 px-8 flex flex-col gap-4;
 }
 
 .back-mobile {
