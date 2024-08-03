@@ -5,13 +5,10 @@ const nuxtApp = useNuxtApp();
 
 const loading = ref(true);
 
-nuxtApp.hook('page:start', () => {
-  console.log('_________start');
-});
+nuxtApp.hook('page:start', () => {});
 
 nuxtApp.hook('page:finish', () => {
   loading.value = false;
-  console.log('_________finish');
 });
 </script>
 <template>
