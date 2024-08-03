@@ -385,8 +385,7 @@ export const projects = [
     link: 'https://www.kena-entrepreneurs.com/',
   },
 ];
-
-export const projectButtons = [
+export const projectBData = [
   {
     title: 'Bridges',
     divClass:

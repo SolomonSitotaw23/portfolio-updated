@@ -1,5 +1,8 @@
 <script setup>
-import { projects, projectButtons } from 'assets/datas/projects.js';
+import { projects, projectBData } from 'assets/datas/projects.js';
+
+const projectButtons = ref(projectBData);
+
 const isModalOpened = ref(false);
 const openModal = () => {
   isModalOpened.value = true;
@@ -22,6 +25,8 @@ const handleClick = (value) => {
   selectedProject.value = value;
   openModal();
 };
+
+console.log(projectButtons);
 </script>
 <template>
   <section class="section">
@@ -37,6 +42,7 @@ const handleClick = (value) => {
     <div class="lg:w-1/2 bg-white_ flex-col gap-6 max-h-screen">
       <div
         class="h-full max-h-screen px-8 lg:px-40 lg:border-8 border-white_border border-l-0 overflow-scroll lg:py-20 py-10 grid gird-cols-2 lg:grid-cols-3 gap-6 lg:gap-12"
+        v-if="projectButtons"
       >
         <!-- Bridges -->
         <div
