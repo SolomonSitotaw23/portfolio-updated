@@ -52,29 +52,22 @@ import { abouts } from "assets/datas/about.js";
         </div>
 
         <!-- right side -->
-        <div
-            class="lg:w-1/2 sm:min-h-screen max-h-screen overflow-scroll flex items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
-        >
-            <Splide
-                :options="{
-                    gap: '5rem',
-                    wheel: true,
-                    flickMaxPages: 1,
-                    flickPower: 300,
-                    wheelMinThreshold: 100,
-                }"
-                class="w-full md:px-20 md:py-20 px-8 bg-gradient-to-b from-white_ via-transparent to-white_ min-h-screen py-6 flex items-center"
+        <div class="lg:w-1/2 lg:py-20 py-20 px-4 max-h-screen overflow-hidden">
+            <div
+                class="lg:px-20 h-[90vh] overflow-scroll w-full flex flex-col gap-6"
             >
-                <SplideSlide v-for="about in abouts" :key="about.id">
+                <div v-for="about in abouts" class="">
                     <div
-                        class="h-full w-full bg-green-100 relative flex items-start justify-start flex-col md:gap-16 gap-12"
+                        class="w-full relative flex items-start justify-start flex-col md:gap-16 gap-12"
                     >
                         <h1
-                            class="lg:text-5xl text-3xl font-space-grotesk font-bold uppercase tracking-wide"
+                            class="lg:text-5xl sticky top-0 bg-white_ w-full z-50 text-3xl font-space-grotesk font-bold uppercase tracking-wide pt-10"
                         >
                             {{ about.title }}
                         </h1>
-                        <div class="flow-root font-space-grotesk">
+                        <div
+                            class="flow-root font-space-grotesk lg:ml-10 h-full l w-full scrollbar-custom lg:px-8"
+                        >
                             <ul role="list" class="-mb-8">
                                 <li
                                     v-for="(ab, aboutIdx) in about.data"
@@ -83,7 +76,7 @@ import { abouts } from "assets/datas/about.js";
                                     <div class="relative pb-8">
                                         <span
                                             v-if="aboutIdx !== ab.length - 1"
-                                            class="absolute left-5 top-5 -ml-px h-full w-0.5 bg-primary_border"
+                                            class="absolute left-5 top-5 h-full w-0.5 bg-primary_border"
                                             aria-hidden="true"
                                         />
                                         <div
@@ -113,22 +106,104 @@ import { abouts } from "assets/datas/about.js";
                                                         >
                                                     </div>
                                                     <span
-                                                        class="font-bold text-xl"
+                                                        class="font-light lg:text-xl text-lg text-primary_custom"
                                                     >
-                                                        Fullstack developer
+                                                        LeadBackend developer
                                                     </span>
                                                     <p
                                                         class="mt-0.5 text-sm text-gray-500"
                                                     >
                                                         {{ ab.date }}
                                                     </p>
+                                                    <p
+                                                        class="text-sm mr-4 mt-3"
+                                                    >
+                                                        {{
+                                                            ab.company?.overview
+                                                        }}
+                                                    </p>
                                                 </div>
                                                 <div
-                                                    class="mt-2 text-sm text-gray-700"
+                                                    class="mt-2 text-sm text-gray-700 flex flex-col gap-3"
                                                 >
-                                                    <p>
-                                                        {{ ab.skills }}
-                                                    </p>
+                                                    <div
+                                                        v-if="
+                                                            ab.responsiblities
+                                                        "
+                                                    >
+                                                        <span class="text-lg"
+                                                            >Key
+                                                            Responsiblities</span
+                                                        >
+                                                        <ul
+                                                            v-for="(
+                                                                resposiblity,
+                                                                indx
+                                                            ) in ab.responsiblities"
+                                                            :key="index"
+                                                            class="ml-4 flex gap-2 items-center"
+                                                        >
+                                                            <div
+                                                                class="flex items-baseline gap-2"
+                                                            >
+                                                                <span
+                                                                    class="w-2 h-2 bg-primary_custom/50"
+                                                                ></span>
+                                                                <li class="">
+                                                                    {{
+                                                                        resposiblity
+                                                                    }}
+                                                                </li>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- Accomplishments -->
+
+                                                    <div
+                                                        v-if="
+                                                            ab.accomplishments
+                                                        "
+                                                    >
+                                                        <span class="text-lg"
+                                                            >Accomplishments</span
+                                                        >
+                                                        <ul
+                                                            v-for="(
+                                                                accomplishment,
+                                                                indx
+                                                            ) in ab.accomplishments"
+                                                            :key="index"
+                                                            class="ml-4 flex gap-2 items-center"
+                                                        >
+                                                            <div
+                                                                class="flex items-baseline gap-2"
+                                                            >
+                                                                <span
+                                                                    class="w-2 h-2 bg-primary_custom/50"
+                                                                ></span>
+                                                                <li class="">
+                                                                    {{
+                                                                        accomplishment
+                                                                    }}
+                                                                </li>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                    <div
+                                                        v-if="ab.skills.length"
+                                                    >
+                                                        <span class="text-lg"
+                                                            >Skills Gained</span
+                                                        >
+                                                        <!-- Skills Gained -->
+                                                        <Skills
+                                                            :skills="ab.skills"
+                                                        />
+                                                    </div>
+
+                                                    <!-- <p>
+                                                    {{ ab.skills }}
+                                                </p> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -137,8 +212,8 @@ import { abouts } from "assets/datas/about.js";
                             </ul>
                         </div>
                     </div>
-                </SplideSlide>
-            </Splide>
+                </div>
+            </div>
         </div>
     </section>
 </template>

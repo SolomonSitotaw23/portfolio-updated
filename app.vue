@@ -1,6 +1,7 @@
 <script setup></script>
 <template>
     <div>
+        <NuxtLoadingIndicator :height="4" :duration="4000" color="yellow" />
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>
