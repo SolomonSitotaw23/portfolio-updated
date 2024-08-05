@@ -91,8 +91,8 @@ onMounted(() => {
   anime({
     targets: '.right_side',
     width: '100%',
-    duration: 4000,
-    easing: 'easeOutElastic(1,.8)',
+    duration: 3000,
+    easing: 'linear',
   });
 
   //overlay layer animation
@@ -134,17 +134,17 @@ onMounted(() => {
     <div class="back-button-wrappers">
       <!-- mobile Back -->
       <BackMobile />
-      <BackLg />
+      <BackLg class="z-10" />
       <Left :content="content" class="left_side"> clients </Left>
     </div>
 
     <!-- right side -->
     <div class="lg:w-1/2 bg-white_ flex-col gap-6 max-h-screen relative">
       <div
-        class="absolute w-full h-full z-[1] left-0 bg-primary_custom overlay"
+        class="overlay visible absolute w-full h-full z-[1] left-0 bg-primary_custom border-y-8 border-primary_border"
       ></div>
       <div
-        class="h-full max-h-screen px-8 lg:px-40 lg:border-8 border-white_border border-l-0 overflow-scroll lg:py-20 py-10 grid gird-cols-2 lg:grid-cols-3 gap-6 lg:gap-12"
+        class="h-full max-h-screen px-8 lg:px-40 lg:border-8 border-white_border border-l-0 overflow-scroll lg:py-20 py-10 grid gird-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 scrollbar-custom"
         v-if="projectButtons"
       >
         <!-- Bridges -->
@@ -152,7 +152,7 @@ onMounted(() => {
           v-for="(projectButton, index) in projectButtons"
           :key="index"
           @click="handleClick(projects[index])"
-          :class="projectButton.divClass + ' group__project'"
+          :class="projectButton.divClass + 'group__project'"
         >
           <NuxtImg
             :src="projectButton.imageSrc"

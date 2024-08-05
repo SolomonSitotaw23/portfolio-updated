@@ -1,6 +1,4 @@
 <script setup>
-console.log('here is progress');
-
 const nuxtApp = useNuxtApp();
 
 const loading = ref(true);

@@ -42,12 +42,12 @@ const props = defineProps({
         </div>
         <div
           v-if="project.numberOfUsers.length > 0"
-          class="flex flex-row w-full items-center lg:px-20 lg:py-6 py-4 lg:gap-10"
+          class="bg-green-300 w-full items-center lg:py-6 py-4 lg:gap-3 gap-2"
         >
           <div
             v-for="(number, index) in project.numberOfUsers"
             :key="index"
-            class="flex flex-col lg:gap-3 gap-2 items-center justify-center w-full"
+            class="flex flex-col gird grid-cols-3 bg-red-400 lg:gap-3 gap-2 items-center justify-center"
           >
             <span class="lg:text-4xl text-2xl font-bold">{{
               number.number
