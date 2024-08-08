@@ -79,14 +79,7 @@ onMounted(() => {
           Hi, I'm Solomon Sitotaw'
         </h1>
         <p class="md:text-lg text-sm">
-          a dedicated full-stack developer specializing in building robust
-          applications using Go for back-end development and JavaScript
-          frameworks like React and Vue for front-end experiences. I enjoy
-          crafting efficient, scalable solutions that enhance user engagement
-          and streamline functionality. With a strong focus on performance and
-          clean code, I thrive on tackling complex challenges and continuously
-          improving my skills in this ever-evolving tech landscape. Let’s
-          collaborate to bring innovative ideas to life!
+     I am a skilled fullstack developer with a BSc in Software Engineering from Bahirdar Institute of Technology. My expertise spans frontend technologies like React.js and Vue.js, and backend development with Node.js and PostgreSQL as a database solution. I completed fullstack training at Minab IT Solutions, where I gained practical experience in building applications. My strong foundation in system design, data structures, and Agile methodologies enables me to create efficient and scalable solutions.
         </p>
         <!-- Skills Gained -->
       </div>

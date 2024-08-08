@@ -91,7 +91,7 @@ onMounted(() => {
   anime({
     targets: '.right_side',
     width: '100%',
-    duration: 3000,
+    duration: 1000,
     easing: 'linear',
   });
 
@@ -100,13 +100,13 @@ onMounted(() => {
     targets: '.overlay',
     easing: 'cubicBezier(.5, .05, .1, .3)',
     width: ['100%', '0%'],
-    duration: 3000,
+    duration: 2000,
     autoplay: true,
   });
   anime({
     targets: '.number_of_projects',
     opacity: [0, 1],
-    duration: 3000,
+    duration: 2000,
     easing: 'cubicBezier(.5, .05, .1, .3)',
   });
   anime({
@@ -123,7 +123,7 @@ onMounted(() => {
     opacity: [0, 1],
     translateY: [100, 0],
     delay: anime.stagger(200),
-    duration: 2000,
+    duration: 1000,
     easing: 'easeInElastic(1,.8)',
   });
 });
