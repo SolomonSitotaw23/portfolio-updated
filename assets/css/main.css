@@ -58,7 +58,6 @@ body {
 }
 
 /* input */
-
 .wave-group {
   position: relative;
 }
@@ -66,9 +65,6 @@ body {
 .wave-group .input {
   font-size: 16px;
   padding: 10px 10px 10px 5px;
-  /* display: block; */
-  /* width: 200px; */
-
   border: none;
   border-bottom: 1px solid #515151;
   background: transparent;
@@ -77,13 +73,8 @@ body {
 .wave-group .textarea {
   @apply bg-red-400;
   font-size: 16px;
-  /* padding: 10px 10px 15px 5px; */
-  /* display: block; */
-  /* width: 200px; */
-
   border: none;
   border-bottom: 1px solid #515151;
-  /* background: transparent; */
 }
 
 .wave-group .textarea:focus {

@@ -5,7 +5,7 @@ const projectButtons = ref([
   {
     title: 'Bridges',
     divClass:
-      'row-span-1 col-span-2 box active:bg-primary_custom hover:bg-primary_border hover:transform hover:scale-110 group h-[163px]',
+      'row-span-1 py-30 col-span-2 box active:bg-primary_custom hover:bg-primary_border hover:transform hover:scale-110 group h-[163px]',
     imageClass:
       'filter brightness-0 grayscale group-hover:invert transition-all duration-200 h-14',
     imageSrc: 'image/bridges_logo.svg',
@@ -152,7 +152,7 @@ onMounted(() => {
           v-for="(projectButton, index) in projectButtons"
           :key="index"
           @click="handleClick(projects[index])"
-          :class="projectButton.divClass + 'group__project'"
+          :class="projectButton.divClass"
         >
           <NuxtImg
             :src="projectButton.imageSrc"

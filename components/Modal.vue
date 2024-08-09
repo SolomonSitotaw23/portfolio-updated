@@ -75,7 +75,7 @@ onMounted(() => {
                 <Icon name="iconamoon:close-bold  " class="text-2xl" />
               </div>
               <DialogPanel
-                class="lg:border-8 border-white relative transform lg:rounded-lg bg-white_ lg:max-h-[calc(100dvh-120px)] overflow-y-scroll text-left shadow-xl transition-all"
+                class="lg:border-8 border-white relative transform lg:rounded-lg bg-white_ lg:max-h-[calc(100dvh-120px)] overflow-y-scroll scrollbar-custom text-left shadow-xl transition-all"
               >
                 <!-- slot -->
                 <slot />

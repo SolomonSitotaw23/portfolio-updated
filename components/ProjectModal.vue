@@ -12,12 +12,11 @@ const props = defineProps({
     class="font-space-grotesk pt-20 bg-white_ lg:min-w-[calc(100dvw-300px)] flex flex-col justify-center items-center px-8"
   >
     <div
-      class="lg:max-w-[640px] max-w-screen pb-20 h-full text-primary_custom flex justify-center"
+      class="lg:max-w-[640px] max-w-screen h-full text-primary_custom flex justify-center"
     >
       <div class="flex flex-col gap-4">
         <div class="flex flex-col">
           <div class="w-7 h-1 mb-5 bg-primary_border"></div>
-
           <span class="text-xs mb-1 font-bold">{{ project.subtitle }} </span>
           <span class="lg:text-[40px] text-[22px] font-bold uppercase">{{
             project.title
@@ -40,14 +39,15 @@ const props = defineProps({
             >{{ tech.title }}</span
           >
         </div>
+
         <div
           v-if="project.numberOfUsers.length > 0"
-          class="bg-green-300 w-full items-center lg:py-6 py-4 lg:gap-3 gap-2"
+          className="grid grid-cols-3 grid-rows-2 gap-4 pt-4"
         >
           <div
             v-for="(number, index) in project.numberOfUsers"
             :key="index"
-            class="flex flex-col gird grid-cols-3 bg-red-400 lg:gap-3 gap-2 items-center justify-center"
+            class="flex flex-col items-center col-span-1 lg:gap-3 gap-2"
           >
             <span class="lg:text-4xl text-2xl font-bold">{{
               number.number
@@ -95,7 +95,7 @@ const props = defineProps({
     >
 
     <div
-      class="lg:max-w-[640px] w-full py-20 h-full text-primary_custom flex flex-col gap-4 justify-center"
+      class="lg:max-w-[640px] w-full pt-20 h-full text-primary_custom flex flex-col gap-4 justify-center"
     >
       <div class="w-full flex flex-col gap-4 pb-6">
         <span class="lg:text-[40px] text-[22px] font-bold">Features</span>
@@ -113,7 +113,10 @@ const props = defineProps({
           </li>
         </ul>
       </div>
-      <div class="flex flex-col gap-4 animate-slide-in-bottom">
+      <div
+        v-if="project.learning_outcomes"
+        class="flex flex-col gap-4 animate-slide-in-bottom"
+      >
         <div class="w-7 h-1 mb-5 bg-primary_border"></div>
         <div class="flex flex-col">
           <span class="text-xs mb-1 font-bold">outcomes </span>
@@ -123,7 +126,7 @@ const props = defineProps({
         </div>
         <div class="flex flex-col">
           <p
-            v-for="(learningOutcome, index) in project.learining_outcomes"
+            v-for="(learningOutcome, index) in project.learning_outcomes"
             :key="index"
             class="lg:text-lg text-sm font-thin"
           >

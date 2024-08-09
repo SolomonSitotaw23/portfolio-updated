@@ -384,4 +384,114 @@ export const projects = [
     ],
     link: 'https://www.kena-entrepreneurs.com/',
   },
+  {
+    id: 5,
+    subtitle: 'Empowering Enterprises for Resilience',
+    title: 'MESMER Program',
+    overview:
+      'MESMER is a program that aims to help enterprises by providing access to finance, business development, and psychosocial services. The goal is to help these businesses recover from shocks, build resilience, and grow to create dignified and fulfilling work for the youth.',
+    numberOfUsers: [
+      {
+        title: 'Program Duration',
+        number: '5 yrs',
+      },
+      {
+        title: 'Jobs Created',
+        number: '410k+',
+      },
+      {
+        title: 'Enterprises Supported',
+        number: '72k+',
+      },
+    ],
+    services: [
+      {
+        title: 'Access to Finance',
+        description:
+          'Providing financial assistance to help enterprises recover from economic shocks and grow sustainably.',
+      },
+      {
+        title: 'Business Development',
+        description:
+          'Offering tailored business development services to enhance operational efficiency and market reach.',
+      },
+      {
+        title: 'Psychosocial Services',
+        description:
+          'Delivering support programs to improve the mental well-being of entrepreneurs and their teams.',
+      },
+    ],
+    techs: [
+      {
+        title: 'Nuxt.js',
+      },
+      {
+        title: 'Golang',
+      },
+      {
+        title: 'GraphQL',
+      },
+      {
+        title: 'Apollo',
+      },
+      {
+        title: 'Tailwind CSS',
+      },
+      {
+        title: 'Headless UI',
+      },
+      {
+        title: 'Nginx',
+      },
+      {
+        title: 'AWS',
+      },
+      {
+        title: 'Postgresql',
+      },
+    ],
+    partners: [
+      'Local Government',
+      'Business Associations',
+      'Financial Institutions',
+      'NGOs',
+      'Community Organizations',
+    ],
+    features: [
+      {
+        title: 'Dashboard for Partners',
+        description:
+          'Creating complex dashboards that provide insights and analytics for partners involved in the MESMER program.',
+      },
+      {
+        title: 'Enterprise Registration Forms',
+        description:
+          'Developing multiple forms for enterprises to register and access various services offered by the program.',
+      },
+    ],
+    learning_outcomes: [
+      'Gained experience in full-stack development using Nuxt.js for the frontend and Golang for the backend.',
+      'Integrate APIs with  Apollo Graphql for efficient data handling and communication.',
+      'Enhanced skills in creating responsive and user-friendly interfaces using Tailwind CSS and Headless UI.',
+      'Implemented Nginx for efficient serving of applications and AWS for scalable cloud solutions.',
+    ],
+    challengesfaced: [
+      {
+        title: 'User Engagement',
+        description:
+          'Encouraging enterprises to actively participate in the MESMER program and utilize available resources.',
+      },
+      {
+        title: 'Data Management',
+        description:
+          'Ensuring robust data management practices to handle the large volume of enterprise registrations and interactions.',
+      },
+      {
+        title: 'System Integration',
+        description:
+          'Seamlessly integrating various services and ensuring a smooth user experience across different platforms.',
+      },
+    ],
+    link: 'https://ethiomesmer.com/',
+  },
 ];
