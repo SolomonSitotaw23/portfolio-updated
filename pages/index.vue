@@ -45,7 +45,7 @@ const onAnimationComplete = () => {
       <div class="h-screen w-screen bg-gray-500" v-if="loading"></div>
       <section
         v-else
-        class="font-space-grotesk sm:vignette md:border-8 border-primary_border flex-col min-h-[100dvh] h-[100dvh] bg-primary_custom overflow-hidden relative min-w-screen flex justify-between"
+        class="font-space-grotesk sm:vignette md:border-8 border-primary_border flex-col min-h-[100dvh] h-[100dvh] bg-primary_custom overflow-hidden transition-all duration-200 relative min-w-screen flex justify-between"
       >
         <Header />
         <div
