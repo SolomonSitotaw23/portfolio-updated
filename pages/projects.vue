@@ -52,12 +52,11 @@ const projectButtons = ref([
   },
 
   {
-    title: 'awaqi',
+    title: 'The Afrotimes',
     divClass:
       'row-span-1 col-span-1 lg:col-start-3 box hover:bg-[#F69321] group hover:transform hover:scale-110 h-[163px]',
-    imageClass:
-      'filter brightness-0 grayscale group-hover:invert transition-all duration-200 h-14',
-    imageSrc: 'image/Awaqi.svg',
+    imageClass: 'filter  grayscale  transition-all duration-200 h-20',
+    imageSrc: 'image/Afrotimes.svg',
   },
 ]);
 

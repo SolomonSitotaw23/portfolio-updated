@@ -494,4 +494,201 @@ export const projects = [
     ],
     link: 'https://ethiomesmer.com/',
   },
+  {
+    id: 6,
+    subtitle: 'Reliable Patient Transportation Services',
+    title: 'Comfort Wheels',
+    overview:
+      'Comfort Wheels is an online platform designed to transport patients from hospitals to their homes or vice versa. The application integrates payment processing through Stripe and utilizes Auth0 for secure authentication. Users can create accounts, enter patient details, and request transportation services while admins can estimate costs and manage sessions.',
+    numberOfUsers: [
+      {
+        title: 'Backend Development Responsibility',
+        number: 'Full',
+      },
+      {
+        title: 'Payment Integration',
+        number: 'Stripe',
+      },
+      {
+        title: 'Authentication System',
+        number: 'Auth0',
+      },
+    ],
+    services: [
+      {
+        title: 'Patient Transport',
+        description:
+          'Facilitating transportation of patients between hospitals and homes.',
+      },
+      {
+        title: 'Account Management',
+        description:
+          'Allowing users to create accounts and manage their transportation requests.',
+      },
+      {
+        title: 'Price Estimation',
+        description:
+          'Admins can estimate transportation costs based on user inputs.',
+      },
+      {
+        title: 'Email Notifications',
+        description:
+          'Automated email notifications sent to users via SendGrid.',
+      },
+    ],
+    techs: [
+      {
+        title: 'Golang',
+      },
+      {
+        title: 'Stripe',
+      },
+      {
+        title: 'Auth0',
+      },
+      {
+        title: 'SendGrid',
+      },
+      {
+        title: 'HTML',
+      },
+      {
+        title: 'CSS',
+      },
+      {
+        title: 'JavaScript',
+      },
+    ],
+    partners: ['Hospitals', 'Healthcare Providers', 'Transportation Services'],
+    features: [
+      {
+        title: 'User Registration',
+        description: 'Users can create accounts and manage their profiles.',
+      },
+      {
+        title: 'Session Management',
+        description: 'Admins can create and manage transportation sessions.',
+      },
+      {
+        title: 'Payment Processing',
+        description: 'Integrated payment system for secure transactions.',
+      },
+    ],
+    learning_outcomes: [
+      'Gained expertise in backend development using Go for building robust applications.',
+      'Implemented payment integration with Stripe for seamless transactions.',
+      'Utilized Auth0 for secure user authentication and management.',
+      'Developed skills in sending automated emails using SendGrid.',
+    ],
+    challengesfaced: [
+      {
+        title: 'Payment Integration',
+        description:
+          'Ensuring secure and efficient payment processing for users.',
+      },
+      {
+        title: 'User Authentication',
+        description:
+          'Implementing a reliable authentication system to protect user data.',
+      },
+      {
+        title: 'Session Management',
+        description:
+          'Creating an efficient system for managing transportation requests and sessions.',
+      },
+    ],
+    link: 'https://www.comfortwheels.com/',
+  },
+  {
+    id: 7,
+    subtitle: 'Celebrating African Culture and Heritage',
+    title: 'Afro Times',
+    overview:
+      'Afro Times is a magazine and newsletter website that provides news and experiences related to art, culture, and tourism across Africa, with a special focus on Ethiopia. It aims to showcase the rich cultural diversity and stories of the continent.',
+    numberOfUsers: [
+      {
+        title: 'Content Creation Status',
+        number: 'Ongoing',
+      },
+      {
+        title: 'Website Skeleton Completion',
+        number: '100%',
+      },
+    ],
+    services: [
+      {
+        title: 'News Articles',
+        description:
+          'Providing the latest news related to art, culture, and tourism in Africa.',
+      },
+      {
+        title: 'Cultural Features',
+        description:
+          'Highlighting unique cultural practices, events, and experiences from across the continent.',
+      },
+      {
+        title: 'Tourism Guides',
+        description:
+          "Offering insights and guides for travelers interested in exploring Africa's diverse landscapes and cultures.",
+      },
+    ],
+    techs: [
+      {
+        title: 'Nuxt.js',
+      },
+      {
+        title: 'Tailwind CSS',
+      },
+      {
+        title: 'HTML',
+      },
+      {
+        title: 'CSS',
+      },
+      {
+        title: 'JavaScript',
+      },
+    ],
+    partners: [
+      'Local Artists',
+      'Cultural Institutions',
+      'Tourism Boards',
+      'Community Organizations',
+    ],
+    features: [
+      {
+        title: 'User-Friendly Interface',
+        description:
+          'Developing a responsive and intuitive interface for easy navigation and content access.',
+      },
+      {
+        title: 'Content Management System',
+        description:
+          'Implementing a CMS for efficient content creation and management by the editorial team.',
+      },
+    ],
+    learning_outcomes: [
+      'Gained experience in front-end development using Nuxt.js for building interactive user interfaces.',
+      'Developed skills in using Tailwind CSS for responsive design and styling.',
+      'Collaborated with a team to create a cohesive design and user experience.',
+    ],
+    challengesfaced: [
+      {
+        title: 'Content Strategy',
+        description:
+          'Developing a clear content strategy to attract and retain an audience.',
+      },
+      {
+        title: 'User Engagement',
+        description:
+          'Encouraging users to interact with the content and share their experiences.',
+      },
+      {
+        title: 'Performance Optimization',
+        description:
+          'Ensuring the website loads quickly and efficiently to provide a smooth user experience.',
+      },
+    ],
+    link: 'https://staging.theafrotimes.com/',
+  },
 ];
