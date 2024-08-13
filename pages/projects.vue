@@ -158,7 +158,7 @@ onMounted(() => {
       <!-- mobile Back -->
       <BackMobile />
       <BackLg class="z-10" />
-      <Left :content="content" class="left_side"> clients </Left>
+      <Left :content="content" class="left_side"> </Left>
     </div>
 
     <!-- right side -->
