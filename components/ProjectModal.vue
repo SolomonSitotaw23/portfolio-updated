@@ -42,7 +42,7 @@ const props = defineProps({
 
         <div
           v-if="project.numberOfUsers.length > 0"
-          className="grid grid-cols-3 grid-rows-2 gap-4 pt-4 py-6"
+          className="grid grid-cols-3 grid-rows-2 gap-4  pt-10"
         >
           <div
             v-for="(number, index) in project.numberOfUsers"
@@ -58,8 +58,8 @@ const props = defineProps({
       </div>
     </div>
     <!-- Project Images -->
-
     <Splide
+      v-if="project.images.length > 0"
       :options="{
         rewind: true,
         pauseOnFocus: false,
@@ -72,28 +72,19 @@ const props = defineProps({
       <SplideSlide
         v-for="image in project.images"
         :key="image.title"
-        class="aspect-video overflow-hidden lg:m-4 bg-yellow-200"
+        class="aspect-video overflow-hidden lg:m-4 bg-yellow-200 flex"
       >
         <NuxtImg :src="image.source" class="w-full h-full" />
-        <p>{{ image.title }}</p>
-      </SplideSlide>
-      <div class="splide__progress">
-        <div class="splide__progress__bar" />
-      </div>
 
-      <button class="splide__toggle" type="button">
-        <span class="splide__toggle__play">Play</span>
-        <span class="splide__toggle__pause">Pause</span>
-      </button>
+        <span
+          class="uppercase text-[10px] font-bold text-primary_border tracking-[0.5em] font-space-grotesk"
+          >{{ image.title }}</span
+        >
+      </SplideSlide>
     </Splide>
 
-    <span
-      class="uppercase text-[10px] font-bold text-primary_border tracking-[0.5em] font-space-grotesk"
-      >Sample Images</span
-    >
-
     <div
-      class="lg:max-w-[640px] w-full pt-20 h-full text-primary_custom flex flex-col gap-4 justify-center"
+      class="lg:max-w-[640px] w-full h-full text-primary_custom flex flex-col gap-4 justify-center"
     >
       <div class="w-full flex flex-col gap-4 pb-6">
         <span class="lg:text-[40px] text-[22px] font-bold">Features</span>

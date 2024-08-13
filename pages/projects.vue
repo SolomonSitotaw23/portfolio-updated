@@ -170,7 +170,6 @@ onMounted(() => {
         class="h-full max-h-screen px-8 lg:px-40 lg:border-8 border-white_border border-l-0 overflow-scroll lg:py-20 py-10 grid gird-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 scrollbar-custom"
         v-if="projectButtons"
       >
-        <!-- Bridges -->
         <div
           v-for="(projectButton, index) in projectButtons"
           :key="index"
@@ -182,8 +181,6 @@ onMounted(() => {
             :class="projectButton.imageClass"
           />
         </div>
-
-        <!-- space holder -->
       </div>
     </div>
 
@@ -192,11 +189,11 @@ onMounted(() => {
     >
       <div class="flex flex-col items-center">
         <span
-          class="text-7xl font-bold font-baunk flex items-center justify-center"
+          class="text-6xl font-bold font-baunk flex items-center justify-center"
         >
-          11+
+          {{ projects.length }}+
         </span>
-        <span class="text-base uppercase font-baunk"> projects </span>
+        <span class="text-base uppercase font-baunk"> Projects </span>
       </div>
     </div>
 

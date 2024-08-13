@@ -44,7 +44,15 @@ export const projects = [
     images: [
       {
         title: 'dashboard',
-        source: 'images/bridges/dashboard.jpg',
+        source: 'image/project_hero/bridges/landing.jpg',
+      },
+      {
+        title: 'dashboard',
+        source: 'image/project_hero/bridges/dashboard.jpg',
+      },
+      {
+        title: 'dashboard',
+        source: 'image/project_hero/bridges/partner.jpg',
       },
     ],
     features: [
@@ -157,12 +165,7 @@ export const projects = [
         title: 'GraphQL',
       },
     ],
-    images: [
-      {
-        title: '',
-        source: '',
-      },
-    ],
+    images: [],
     features: [
       {
         title: 'Job Vacancy Aggregation',
@@ -236,12 +239,7 @@ export const projects = [
         title: 'Nuxt.js',
       },
     ],
-    images: [
-      {
-        title: 'Awaqi Center Overview',
-        source: 'link_to_image',
-      },
-    ],
+    images: [],
     features: [
       {
         title: 'Resource Hub',
@@ -313,6 +311,7 @@ export const projects = [
         number: '15',
       },
     ],
+    images: [],
     services: [
       {
         title: 'Training & Mentorship',
@@ -404,6 +403,7 @@ export const projects = [
         number: '72k+',
       },
     ],
+    images: [],
     services: [
       {
         title: 'Access to Finance',
@@ -514,6 +514,7 @@ export const projects = [
         number: 'Auth0',
       },
     ],
+    images: [],
     services: [
       {
         title: 'Patient Transport',
@@ -632,6 +633,7 @@ export const projects = [
           "Offering insights and guides for travelers interested in exploring Africa's diverse landscapes and cultures.",
       },
     ],
+    images: [],
     techs: [
       {
         title: 'Nuxt.js',
@@ -690,5 +692,257 @@ export const projects = [
       },
     ],
     link: 'https://staging.theafrotimes.com/',
+  },
+  {
+    id: 8,
+    subtitle: 'Empowering Students Through Online Learning',
+    title: 'HahuJobs Muya',
+    overview:
+      'HahuJobs Muya is an online learning platform where students can register for various courses, either online or in-person. As a backend developer, I contributed to isolating this component as a microservice, utilizing NATS for messaging, Golang for development, PostgreSQL for database management, and AWS for deployment.',
+    numberOfUsers: [
+      {
+        title: 'Backend Development Role',
+        number: 'Active',
+      },
+      {
+        title: 'Microservice Architecture',
+        number: 'Implemented',
+      },
+    ],
+    services: [
+      {
+        title: 'Course Registration',
+        description: 'Students can register for online or in-class courses.',
+      },
+      {
+        title: 'Course Management',
+        description:
+          'Instructors can create and manage courses offered on the platform.',
+      },
+    ],
+    techs: [
+      {
+        title: 'Golang',
+      },
+      {
+        title: 'PostgreSQL',
+      },
+      {
+        title: 'NATS',
+      },
+      {
+        title: 'AWS',
+      },
+    ],
+    images: [],
+    partners: ['Educational Institutions', 'Instructors', 'Course Providers'],
+    features: [
+      {
+        title: 'User Registration',
+        description:
+          'Allows students to create accounts and manage their course enrollments.',
+      },
+      {
+        title: 'Course Catalog',
+        description:
+          'A comprehensive list of available courses with details and registration options.',
+      },
+      {
+        title: 'Real-time Messaging',
+        description:
+          'Utilizes NATS for efficient communication between microservices.',
+      },
+    ],
+    learning_outcomes: [
+      'Gained experience in backend development using Golang for microservices.',
+      'Implemented NATS for messaging in a microservice architecture.',
+      'Developed skills in using PostgreSQL for data management.',
+      'Gained knowledge in deploying applications on AWS.',
+    ],
+    challengesfaced: [
+      {
+        title: 'Microservice Integration',
+        description:
+          'Ensuring seamless communication between independent microservices.',
+      },
+      {
+        title: 'Database Management',
+        description:
+          'Designing an efficient database schema for course and user management.',
+      },
+      {
+        title: 'Scalability',
+        description:
+          'Building a system that can scale with increasing user demand.',
+      },
+    ],
+    link: 'https://www.muya.hahujobs.io/',
+  },
+  {
+    id: 1,
+    subtitle: 'Connecting Goals and Communities',
+    title: 'We Are Philia',
+    overview:
+      'We Are Philia is a social media platform designed to help individuals share their goals, engage in conversations, and support each other until those goals are achieved. As a front-end developer, I contributed to building a responsive and interactive user interface using React.js.',
+    numberOfUsers: [
+      {
+        title: 'Active Users',
+        number: '1000+',
+      },
+      {
+        title: 'Goals Shared',
+        number: '5000+',
+      },
+    ],
+    services: [
+      {
+        title: 'Goal Sharing',
+        description: 'Users can share their personal goals with the community.',
+      },
+      {
+        title: 'Peer Support',
+        description: 'Connect with others to receive encouragement and advice.',
+      },
+    ],
+    techs: [
+      {
+        title: 'React.js',
+      },
+      {
+        title: 'Node.js',
+      },
+      {
+        title: 'MongoDB',
+      },
+      {
+        title: 'JWT',
+      },
+    ],
+    images: [],
+    partners: [
+      'Community Organizations',
+      'Motivational Coaches',
+      'Educational Institutions',
+    ],
+    features: [
+      {
+        title: 'User Authentication',
+        description: 'Secure signup and login processes for users.',
+      },
+      {
+        title: 'Goal Tracking',
+        description:
+          'Allows users to monitor their progress towards achieving their goals.',
+      },
+      {
+        title: 'Comment and Support',
+        description:
+          'Engage with peers through comments and feedback on shared goals.',
+      },
+    ],
+    learning_outcomes: [
+      'Enhanced skills in building dynamic user interfaces with React.js.',
+      'Improved understanding of state management using Redux or Context API.',
+      'Gained experience in integrating RESTful APIs for data handling.',
+      'Developed knowledge in user authentication and security best practices.',
+    ],
+    challengesfaced: [
+      {
+        title: 'User Engagement',
+        description:
+          'Encouraging active participation and interaction among users.',
+      },
+      {
+        title: 'Responsive Design',
+        description:
+          'Ensuring a seamless experience across different devices and screen sizes.',
+      },
+      {
+        title: 'Real-time Updates',
+        description:
+          'Implementing real-time notifications and updates for user interactions.',
+      },
+    ],
+    link: 'https://www.wearephilia.com/',
+  },
+  {
+    id: 2,
+    subtitle: 'Empowering Local Shopping',
+    title: 'HeyMobile',
+    overview:
+      'HeyMobile is an e-commerce platform designed for a local shop to showcase and sell its products online. As a front-end developer, I contributed to creating a user-friendly interface using Vue.js, ensuring a seamless shopping experience for customers.',
+    numberOfUsers: [
+      {
+        title: 'Active Users',
+        number: '500+',
+      },
+      {
+        title: 'Products Listed',
+        number: '150+',
+      },
+    ],
+    services: [
+      {
+        title: 'Product Listings',
+        description: 'The shop can list its products for customers to browse.',
+      },
+      {
+        title: 'Shopping Cart',
+        description:
+          'Customers can add products to their cart and proceed to checkout.',
+      },
+    ],
+    techs: [
+      {
+        title: 'Vue.js',
+      },
+      {
+        title: 'Node.js',
+      },
+      {
+        title: 'MongoDB',
+      },
+      {
+        title: 'Express.js',
+      },
+    ],
+    images: [],
+    partners: ['Local Shop Owner', 'Payment Processors', 'Delivery Services'],
+    features: [
+      {
+        title: 'User Authentication',
+        description: 'Secure registration and login for customers.',
+      },
+      {
+        title: 'Search and Filter',
+        description:
+          'Customers can easily search for products and filter results.',
+      },
+      {
+        title: 'Order Tracking',
+        description: 'Customers can track their orders in real-time.',
+      },
+    ],
+    learning_outcomes: [
+      'Gained experience in building responsive user interfaces with Vue.js.',
+      'Improved skills in integrating APIs for product and order management.',
+      'Developed knowledge in state management using Vuex.',
+      'Enhanced understanding of e-commerce best practices and user experience design.',
+    ],
+    challengesfaced: [
+      {
+        title: 'Performance Optimization',
+        description: 'Ensuring fast loading times and smooth interactions.',
+      },
+      {
+        title: 'Mobile Responsiveness',
+        description: 'Creating a seamless experience for mobile users.',
+      },
+      {
+        title: 'Payment Integration',
+        description: 'Implementing secure payment gateways for transactions.',
+      },
+    ],
+    link: 'https://heymobile.store/',
   },
 ];
