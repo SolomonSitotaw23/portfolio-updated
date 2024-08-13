@@ -42,7 +42,7 @@ const props = defineProps({
 
         <div
           v-if="project.numberOfUsers.length > 0"
-          className="grid grid-cols-3 grid-rows-2 gap-4 pt-4"
+          className="grid grid-cols-3 grid-rows-2 gap-4 pt-4 py-6"
         >
           <div
             v-for="(number, index) in project.numberOfUsers"
@@ -70,14 +70,12 @@ const props = defineProps({
       class="flex flex-col items-center gap-3 lg:w-[60dvw]"
     >
       <SplideSlide
-        v-for="n in 3"
-        :key="n"
+        v-for="image in project.images"
+        :key="image.title"
         class="aspect-video overflow-hidden lg:m-4 bg-yellow-200"
       >
-        <NuxtImg
-          src="image/project_hero/hahu_jobs_primary.png"
-          class="w-full h-full"
-        />
+        <NuxtImg :src="image.source" class="w-full h-full" />
+        <p>{{ image.title }}</p>
       </SplideSlide>
       <div class="splide__progress">
         <div class="splide__progress__bar" />

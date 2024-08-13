@@ -43,8 +43,8 @@ export const projects = [
     ],
     images: [
       {
-        title: '',
-        source: '',
+        title: 'dashboard',
+        source: 'images/bridges/dashboard.jpg',
       },
     ],
     features: [

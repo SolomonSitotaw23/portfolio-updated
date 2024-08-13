@@ -59,11 +59,28 @@ const projectButtons = ref([
     imageSrc: 'image/Afrotimes.svg',
   },
   {
-    title: 'The Afrotimes',
+    title: 'HahuMuya',
     divClass:
-      'row-span-1 col-span-1 lg:col-start-3 box hover:bg-[#F47524] group hover:transform hover:scale-110 h-[163px]',
-    imageClass: 'filter  grayscale  transition-all duration-200 h-20',
-    imageSrc: 'image/Afrotimes.svg',
+      'row-span-1 col-span-1 lg:col-start-1 box hover:bg-[#08B9A9] group hover:transform hover:scale-110 h-[163px]',
+    imageClass:
+      'ilter brightness-0 grayscale group-hover:invert transition-all duration-200  h-20',
+    imageSrc: 'image/muya.svg',
+  },
+  {
+    title: 'Phlia',
+    divClass:
+      'row-span-1 col-span-1 lg:col-start-2 box hover:bg-[#FF966E] group hover:transform hover:scale-110 h-[163px]',
+    imageClass:
+      'ilter  grayscale group-hover:invert transition-all duration-200  h-20',
+    imageSrc: 'image/phlia.svg',
+  },
+  {
+    title: 'Hey Mobile',
+    divClass:
+      'row-span-1 col-span-1 lg:col-start-3 box hover:bg-[#009FDB] group hover:transform hover:scale-110 h-[163px]',
+    imageClass:
+      'ilter brightness-0  grayscale group-hover:invert transition-all duration-200  h-14',
+    imageSrc: 'image/hey.svg',
   },
 ]);
 
