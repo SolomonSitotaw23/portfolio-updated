@@ -11,7 +11,7 @@ const projectButtons = ref([
     imageSrc: 'image/bridges_logo.svg',
   },
   {
-    title: 'hahu',
+    title: 'hahu jobs',
     divClass:
       'row-span-1 col-span-1 box hover:bg-[#009688] group hover:transform hover:scale-110 h-[163px]',
     imageClass:
@@ -19,7 +19,7 @@ const projectButtons = ref([
     imageSrc: 'image/hahu.png',
   },
   {
-    title: 'awaqi',
+    title: 'awaqi centers',
     divClass:
       'row-span-1 col-span-1 lg:col-start-2 box hover:bg-[#F69321] group hover:transform hover:scale-110 h-[163px]',
     imageClass:
@@ -59,7 +59,7 @@ const projectButtons = ref([
     imageSrc: 'image/Afrotimes.svg',
   },
   {
-    title: 'HahuMuya',
+    title: 'Hahu jobs Muya',
     divClass:
       'row-span-1 col-span-1 lg:col-start-1 box hover:bg-[#08B9A9] group hover:transform hover:scale-110 h-[163px]',
     imageClass:
@@ -67,7 +67,7 @@ const projectButtons = ref([
     imageSrc: 'image/muya.svg',
   },
   {
-    title: 'Phlia',
+    title: 'We are Phlia',
     divClass:
       'row-span-1 col-span-1 lg:col-start-2 box hover:bg-[#FF966E] group hover:transform hover:scale-110 h-[163px]',
     imageClass:
@@ -174,12 +174,19 @@ onMounted(() => {
           v-for="(projectButton, index) in projectButtons"
           :key="index"
           @click="handleClick(projects[index])"
-          :class="projectButton.divClass"
+          :class="
+            projectButton.divClass +
+            ' flex flex-col gap-2 transform transition-all duration-200'
+          "
         >
           <NuxtImg
             :src="projectButton.imageSrc"
             :class="projectButton.imageClass"
           />
+          <span
+            class="text-sm uppercase hidden group-hover:flex transform transition-all duration-200 text-white_"
+            >{{ projectButton.title }}</span
+          >
         </div>
       </div>
     </div>
