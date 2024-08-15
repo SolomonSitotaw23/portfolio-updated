@@ -183,10 +183,6 @@ onMounted(() => {
             :src="projectButton.imageSrc"
             :class="projectButton.imageClass"
           />
-          <span
-            class="text-sm uppercase hidden group-hover:flex transform transition-all duration-200 text-white_"
-            >{{ projectButton.title }}</span
-          >
         </div>
       </div>
     </div>
