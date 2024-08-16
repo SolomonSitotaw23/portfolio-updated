@@ -30,15 +30,15 @@
 /* Sections */
 
 .section {
-  @apply min-h-dvh min-w-full flex flex-col lg:flex-row bg-primary_custom font-space-grotesk;
+  @apply min-h-dvh min-w-full flex flex-col xl:flex-row bg-primary_custom font-space-grotesk;
 }
 
 .back-button-wrappers {
-  @apply lg:w-1/2 text-white_ font-space-grotesk bg-primary_custom lg:border-t-8 lg:border-b-8 lg:border-l-8 lg:border-r-0 border-primary_border lg:py-24 lg:px-40 px-8 flex flex-col gap-4;
+  @apply xl:w-1/2 text-white_ font-space-grotesk bg-primary_custom lg:border-t-8 lg:border-b-8 lg:border-l-8 lg:border-r-0 border-primary_border lg:py-24 2xl:px-40 lg:px-20 px-8 flex flex-col gap-4;
 }
 
 .back-mobile {
-  @apply bg-white_ text-center w-28 px-[12px] py-[7.5px] relative text-black font-semibold mt-8 lg:hidden;
+  @apply bg-white_ text-center w-28 px-[12px] py-[7.5px] relative text-black font-semibold mt-8 xl:hidden;
 }
 
 .back-mobile-icon-wrapper {
@@ -46,7 +46,7 @@
 }
 
 .back-lg {
-  @apply contact_button text-primary_custom absolute hidden lg:flex self-start items-start w-fit;
+  @apply contact_button text-primary_custom absolute hidden xl:flex self-start items-start w-fit;
 }
 
 .left-wrapper {

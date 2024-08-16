@@ -120,15 +120,15 @@ const skills = ref([
 </script>
 <template>
   <section
-    class="min-h-dvh min-w-full flex flex-col lg:flex-row bg-primary_custom"
+    class="min-h-dvh min-w-full flex flex-col xl:flex-row bg-primary_custom"
   >
     <div
-      class="xl:w-1/2 text-white_ font-space-grotesk bg-primary_custom xl:border-8 border-r-0 border-primary_border xl:py-24 xl:px-40 px-8 flex flex-col gap-4"
+      class="xl:w-1/2 text-white_ font-space-grotesk bg-primary_custom xl:border-8 border-r-0 border-primary_border xl:py-24 2xl:px-40 xl:px-16 px-8 flex flex-col gap-4"
     >
       <!-- Back button mobile -->
       <NuxtLink
         to="/"
-        class="bg-white_ text-center w-28 px-[12px] py-[7.5px] relative font-sans text-black font-semibold group mt-8 lg:hidden"
+        class="bg-white_ text-center w-28 px-[12px] py-[7.5px] relative font-sans text-black font-semibold group mt-8 xl:hidden"
       >
         <div
           class="bg-primary_custom text-white_ flex h-[26px] w-7 items-center justify-center absolute left-1 top-[4px] group-hover:w-[103px] z-10 duration-500 text-sm"
@@ -139,7 +139,7 @@ const skills = ref([
       </NuxtLink>
       <!-- Back button mobile -->
       <NuxtLink
-        class="contact_button text-primary_custom absolute mdflex self-start items-start w-fit hidden lg:flex"
+        class="contact_button text-primary_custom absolute self-start items-start w-fit hidden xl:flex"
         to="/"
       >
         <Icon
@@ -159,41 +159,6 @@ const skills = ref([
           experiences.
         </p>
         <!-- Skills Gained -->
-
-        <!-- <div class="flex gap-3 pt-3 text-xs w-full flex-wrap">
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >AWS</span
-                    >
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >Docker</span
-                    >
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >Node</span
-                    >
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >Vue</span
-                    >
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >Nuxt</span
-                    >
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >Node</span
-                    >
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >Vue</span
-                    >
-                    <span
-                        class="box !bg-primary_custom px-2 py-[2px] h-6 uppercase"
-                        >Nuxt</span
-                    >
-                </div> -->
 
         <span class="uppercase font-bold underline pb-2">
           some tools I use</span
@@ -232,7 +197,7 @@ const skills = ref([
 
     <!-- right side -->
     <div
-      class="lg:w-1/2 lg:min-h-full overflow-clip flex flex-col lg:py-6 items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
+      class="xl:w-1/2 lg:min-h-full overflow-clip flex flex-col lg:px-8 lg:py-6 items-center justify-center bg-white_ lg:border-8 border-white_border border-l-0"
     >
       <Splide
         :options="{
@@ -247,7 +212,7 @@ const skills = ref([
         <SplideSlide
           v-for="(skill, index) in skills"
           :key="index"
-          class="cursor-pointer flex flex-col items-center justify-center max-w-screen p-4"
+          class="cursor-pointer flex flex-col items-center justify-center max-w-screen"
         >
           <span
             class="hidden md:flex font-bold font-space-grotesk lg:text-4xl"
@@ -256,7 +221,7 @@ const skills = ref([
           <div class="lg:py-24 py-8 carousel__item">
             <div class="md:mx-auto max-w-7xl md:px-6 lg:px-8">
               <div
-                class="-mx-6 grid grid-cols-2 gap-4 lg:bg-white_ lg:gap-1 overflow-hidden sm:rounded-2xl md:grid-cols-3"
+                class="grid grid-cols-2 gap-4 lg:bg-white_ lg:gap-1 overflow-hidden sm:rounded-2xl md:grid-cols-3"
               >
                 <div
                   v-for="item in skill.items"

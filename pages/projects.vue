@@ -162,12 +162,12 @@ onMounted(() => {
     </div>
 
     <!-- right side -->
-    <div class="lg:w-1/2 bg-white_ flex-col gap-6 max-h-screen relative">
+    <div class="xl:w-1/2 bg-white_ flex-col gap-6 max-h-screen relative">
       <div
         class="overlay visible absolute w-full h-full z-[1] left-0 bg-primary_custom border-y-8 border-primary_border"
       ></div>
       <div
-        class="h-full max-h-screen px-8 lg:px-40 lg:border-8 border-white_border border-l-0 overflow-scroll lg:py-20 py-10 grid gird-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 scrollbar-custom"
+        class="h-full max-h-screen px-8 2xl:px-40 lg:border-8 border-white_border border-l-0 overflow-scroll lg:py-20 py-10 grid gird-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 scrollbar-custom"
         v-if="projectButtons"
       >
         <div
@@ -188,7 +188,7 @@ onMounted(() => {
     </div>
 
     <div
-      class="w-40 h-40 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-8 border-white_border bg-white_ hidden lg:flex items-center justify-center px-2 number_of_projects"
+      class="w-40 h-40 z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-8 border-white_border bg-white_ hidden xl:flex items-center justify-center px-2 number_of_projects"
     >
       <div class="flex flex-col items-center">
         <span
