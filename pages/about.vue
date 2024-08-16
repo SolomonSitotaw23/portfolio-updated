@@ -49,30 +49,12 @@ onMounted(() => {
 <template>
   <section class="section">
     <div
-      class="lg:w-1/2 text-white_ font-space-grotesk bg-primary_custom lg:border-y-8 lg:border-l-8 border-primary_border lg:py-24 lg:px-20 px-8 flex flex-col gap-4"
+      class="xl:w-1/2 text-white_ font-space-grotesk bg-primary_custom lg:border-y-8 lg:border-l-8 border-primary_border lg:py-24 lg:px-20 px-8 flex flex-col gap-4"
     >
       <!-- Back button mobile -->
-      <NuxtLink
-        to="/"
-        class="bg-white_ text-center w-28 px-[12px] py-[7.5px] relative font-sans text-black font-semibold group mt-8 lg:hidden"
-      >
-        <div
-          class="bg-primary_custom text-white_ flex h-[26px] w-7 items-center justify-center absolute left-1 top-[4px] group-hover:w-[103px] z-10 duration-500 text-sm"
-        >
-          <Icon name="ph:arrow-left" class="text-xs" />
-        </div>
-        <p class="translate-x-2 text-sm">Go Back</p>
-      </NuxtLink>
+      <BackMobile />
       <!-- Back button mobile -->
-      <NuxtLink
-        class="contact_button text-primary_custom absolute hidden lg:flex self-start items-start w-fit"
-        to="/"
-      >
-        <Icon
-          name="humbleicons:arrow-go-back"
-          class="text-primary-custom text-3xl"
-        />
-      </NuxtLink>
+      <BackLg />
       <div class="flex flex-col gap-4 justify-center h-full py-12">
         <span class="md:text-base text-sm w-1/2">Fullstack developer </span>
         <h1 class="lg:text-[40px] text-2xl font-bold">
@@ -90,12 +72,12 @@ onMounted(() => {
           contribute to project success.
         </p>
         <!-- Skills Gained -->
-        <div class="h-3 w-16 bg-white_ rounded-xl mt-6"></div>
+        <div class="h-1 w-16 bg-white_ rounded-xl mt-6"></div>
       </div>
     </div>
 
     <!-- right side -->
-    <div class="lg:w-1/2 bg-white_ flex-col gap-6 max-h-screen relative">
+    <div class="xl:w-1/2 bg-white_ flex-col gap-6 max-h-screen relative">
       <div
         class="lg:overlay hidden lg:absolute lg:w-full lg:h-full z-[52] left-0 bg-primary_custom border-y-8 border-primary_border"
       ></div>
