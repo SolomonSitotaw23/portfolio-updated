@@ -24,7 +24,7 @@ nuxtApp.hook('page:finish', () => {
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <div
+    <!-- <div
       class="fixed px-3 py-2 text-sm font-bold text-white bg-gray-900 rounded bottom-4 left-4 z-50"
     >
       <span class="4xs:hidden">DEFAULT</span>
@@ -39,7 +39,7 @@ nuxtApp.hook('page:finish', () => {
       <span class="hidden 2xl:inline-block 3xl:hidden">2XL</span>
       <span class="hidden 3xl:inline-block 4xl:hidden">3XL</span>
       <span class="hidden 4xl:inline-block">4XL</span>
-    </div>
+    </div> -->
   </div>
 </template>
 <style></style>
