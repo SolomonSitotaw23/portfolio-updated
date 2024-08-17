@@ -37,6 +37,7 @@ export const abouts = [
         id: 2,
         company: {
           name: 'Wiz Systems',
+          role: 'FrontEnd Developer',
           href: 'https://wiz-systems.com/',
           overview:
             'Wiz Systems specializes in creating innovative data solutions that empower businesses to harness the full potential of their data. Our focus is on providing efficient and cost-effective data management tools that simplify the complexities of big data.',
@@ -56,12 +57,12 @@ export const abouts = [
         id: 2,
         company: {
           name: 'Medco Tech',
-          href: '#',
+          role: 'Full Stack Developer',
           overview:
             'Medco Tech is dedicated to transforming the insurance industry by digitizing traditional paperwork, enhancing efficiency and accessibility for clients and companies alike.',
         },
         icon: 'noto-v1:letter-m',
-        date: '[Insert Dates] – [Insert Location]',
+        date: 'Oct 2021 – Oct 2022 – Addis Ababa, Ethiopia',
         skills: [
           'Vue.js',
           'Tailwind CSS',
@@ -81,12 +82,13 @@ export const abouts = [
         id: 2,
         company: {
           name: 'Personal Projects',
+          role: 'Full Stack Developer',
           href: '#',
           overview:
             'Focused on building high-performance web applications from design to execution, leveraging modern frontend frameworks and backend technologies.',
         },
         icon: 'fluent-emoji-high-contrast:person',
-        date: '[Insert Dates] – [Insert Location]',
+        date: '2019 – present – Addis Ababa, Ethiopia',
         skills: [
           'Vue.js',
           'React',
@@ -97,7 +99,7 @@ export const abouts = [
         accomplishments: [
           'Developed projects similar to https://theafrotimes.com/ from design to execution.',
           'Utilized Vue.js and React for creating dynamic and responsive user interfaces.',
-          'Implemented Go and Node.js for robust backend solutions.',
+          'Implemented Go , Node.js and Hasura for robust backend solutions.',
           'Gained expertise in microservices architecture to enhance scalability and maintainability.',
           'Built high-performance web applications that meet modern user demands.',
         ],

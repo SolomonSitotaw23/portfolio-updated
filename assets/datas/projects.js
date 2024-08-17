@@ -40,6 +40,12 @@ export const projects = [
       {
         title: 'Vue',
       },
+      {
+        title: 'Nginx',
+      },
+      {
+        title: 'GraphQL',
+      },
     ],
     images: [
       {
@@ -163,6 +169,9 @@ export const projects = [
       },
       {
         title: 'GraphQL',
+      },
+      {
+        title: 'Hasura',
       },
     ],
     images: [],
