@@ -61,7 +61,7 @@ onMounted(() => {
           Hi, I'm Solomon Sitotaw'
         </h1>
         <p class="md:text-lg text-sm">
-          With over 4 years of experience in fullstack development, I specialize
+          With over 3 years of experience in fullstack development, I specialize
           in using Vue.js and React for front-end development, alongside Go and
           Node.js for backend services. I have a strong understanding of
           microservice architecture and have successfully collaborated with
