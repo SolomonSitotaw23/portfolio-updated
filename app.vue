@@ -18,7 +18,10 @@ nuxtApp.hook('page:finish', () => {
       <div
         class="h-screen w-screen bg-primary_custom flex items-center justify-center"
       >
-        <div class="loading"></div>
+        <div class="loading">
+          <div class="half"></div>
+          <div class="half"></div>
+        </div>
       </div>
     </div>
     <NuxtLayout>
