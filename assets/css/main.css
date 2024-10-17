@@ -6,28 +6,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'cotta';
-  src: url('../../public/fonts/cotta-free.otf') fromat('truetype');
-}
-
-@layer base {
-}
-
-@font-face {
-  font-family: 'rayken';
-  src: url('../fonts/Rayken-Free-BF64b20fc26f346.otf') fromat('truetype');
-}
-
-@font-face {
   font-family: 'baunk';
   src: url('fonts/Baunk.ttf') format('truetype');
 }
-
-/* body {
-  user-select: none;
-} */
-
-/* Sections */
 
 .section {
   @apply min-h-dvh min-w-full flex flex-col xl:flex-row bg-primary_custom font-space-grotesk;
@@ -1345,4 +1326,19 @@ a {
   100% {
     transform: rotate(405deg);
   }
+}
+/* active nav */
+
+.active ::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -0.25rem;
+  right: 0;
+  transition: right 0.4s, width 0.4s, left 0.4s;
+  width: 100%;
+  left: 0;
 }

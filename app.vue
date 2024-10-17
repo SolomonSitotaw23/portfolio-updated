@@ -25,6 +25,7 @@ nuxtApp.hook('page:finish', () => {
       </div>
     </div>
     <NuxtLayout>
+      <Nav />
       <NuxtPage />
     </NuxtLayout>
     <!-- <div

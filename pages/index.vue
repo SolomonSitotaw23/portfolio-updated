@@ -48,7 +48,7 @@ const onAnimationComplete = () => {
       class="flex-grow flex flex-row items-start md:items-center justify-start relative"
     >
       <!-- left sidebar -->
-      <div
+      <!-- <div
         class="w-16 hidden md:flex flex-col flex-grow items-center justify-center text-white z-10"
       >
         <ul class="flex gap-8 font-space-grotesk transform -rotate-90">
@@ -63,7 +63,7 @@ const onAnimationComplete = () => {
             <li>Projects</li>
           </NuxtLink>
         </ul>
-      </div>
+      </div> -->
       <!-- center -->
       <div class="flex flex-col items-center justify-center w-full">
         <div
@@ -116,55 +116,52 @@ const onAnimationComplete = () => {
         class="w-20 text-white_ md:flex flex-col flex-grow items-center justify-center hidden"
       >
         <div class="flex gap-4 flex-col items-center">
-          <NuxtLink
+          <SocialLink
             to="https://www.linkedin.com/in/solomonsitotaw/"
             class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#0A66C2] hover:after:bg-[#0A66C2] group"
-          >
-            <Icon
-              name="dashicons:linkedin"
-              class="text-xl group-hover:text-white_"
-            />
-          </NuxtLink>
-
-          <NuxtLink
+            icon="dashicons:linkedin"
+            iconClass="text-xl group-hover:text-white_"
+          />
+          <SocialLink
             to="https://github.com/SolomonSitotaw23"
             class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#010409] hover:after:bg-[#010409] group"
-          >
-            <Icon name="uil:github" class="text-xl group-hover:text-white_" />
-          </NuxtLink>
-
-          <NuxtLink
-            to="https://github.com/SolomonSitotaw23"
-            class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#1D9BF0] hover:after:bg-[#1D9BF0] group"
-          >
-            <Icon
-              name="fa6-brands:x-twitter"
-              class="text-xl group-hover:text-white_"
-            />
-          </NuxtLink>
-
-          <NuxtLink
+            icon="uil:github"
+            iconClass="text-xl group-hover:text-white_"
+          />
+          <SocialLink
+            to="https://www.upwork.com/freelancers/~01647b957f61d1959b?mp_source=share"
+            class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#6FDA44] hover:after:bg-[#1D9BF0] group"
+            icon="fa6-brands:upwork"
+            iconClass="text-xl group-hover:text-white_"
+          />
+          <SocialLink
             to="https://mastodon.social/@solomon23"
             class="cta_btn p-1 w-14 h-14 flex items-center justify-center hover:bg-[#2B90D9] hover:after:bg-[#2B90D9] group"
-          >
-            <Icon
-              name="mingcute:mastodon-fill"
-              class="text-xl group-hover:text-white_"
-            />
-          </NuxtLink>
+            icon="mingcute:mastodon-fill"
+            iconClass="text-xl group-hover:text-white_"
+          />
         </div>
       </div>
       <!--  -->
       <div>
-        <button
-          class="contact_button absolute hidden md:bottom-5 md:right-20 md:flex items-center justify-center z-50 hover:animate-swing"
-          @click="openModal()"
-        >
-          <Icon
-            name="f7:chat-bubble-2-fill"
-            class="text-primary-custom text-3xl"
-          />
-        </button>
+        <div>
+          <div
+            class="tooltip hidden group-hover:block absolute bottom-10 right-2 z-50 bg-white_ p-2 rounded-md shadow-md"
+          >
+            Let's talk about your project
+          </div>
+
+          <button
+            class="contact_button absolute hidden md:bottom-5 md:right-20 md:flex items-center justify-center z-50 hover:animate-swing"
+            @click="openModal()"
+          >
+            <Icon
+              name="f7:chat-bubble-2-fill"
+              class="text-primary-custom text-3xl"
+            />
+          </button>
+        </div>
+        <!-- Chat button tooltip -->
         <!-- Nav for mobile -->
         <div
           class="button-container absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 md:hidden font-space-grotesk"

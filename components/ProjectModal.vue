@@ -72,12 +72,12 @@ const props = defineProps({
       <SplideSlide
         v-for="image in project.images"
         :key="image.title"
-        class="aspect-video overflow-hidden lg:m-4 bg-yellow-200 flex"
+        class="aspect-video overflow-hidden lg:m-4 flex flex-col items-center gap-2"
       >
         <NuxtImg :src="image.source" class="w-full h-full" />
 
         <span
-          class="uppercase text-[10px] font-bold text-primary_border tracking-[0.5em] font-space-grotesk"
+          class="uppercase text-[10px] font-bold text-primary_border tracking-[0.5em] font-space-grotesk self-end"
           >{{ image.title }}</span
         >
       </SplideSlide>
