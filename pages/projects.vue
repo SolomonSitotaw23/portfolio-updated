@@ -176,7 +176,7 @@ onMounted(() => {
           @click="handleClick(projects[index])"
           :class="
             projectButton.divClass +
-            ' flex flex-col gap-2 transform transition-all duration-200'
+            ' flex flex-col gap-2 transform transition-all duration-200 cursor-pointer'
           "
         >
           <NuxtImg
