@@ -10,7 +10,7 @@ export const abouts = [
           role: 'Software Engineer -LLM Trainer',
           overview: '',
         },
-        icon: 'noto-v1:letter-m',
+        icon: 'noto-v1:letter-t',
         date: 'oct-2024 – 2025 / USA - Remote (Fulltime)',
         responsiblities: [
           'Contributed to advanced AI projects in collaboration with OpenAI, Gemini (Google DeepMind), and LLMA.',
