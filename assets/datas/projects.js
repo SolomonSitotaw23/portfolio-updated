@@ -131,7 +131,7 @@ export const projects = [
       },
     ],
     myRole: {
-      title: 'Backend Developer',
+      title: 'fullstack Developer',
       description:
         'Developed backend services for job matching algorithms, implemented GraphQL for streamlined data interactions, and integrated notifications for job seekers and employers to enhance the hiring process.',
     },

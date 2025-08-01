@@ -58,18 +58,13 @@ onMounted(() => {
       <div class="flex flex-col gap-4 justify-center h-full py-12">
         <span class="md:text-base text-sm w-1/2">Fullstack developer </span>
         <h1 class="lg:text-[40px] text-2xl font-bold">
-          Hi, I'm Solomon Sitotaw'
+          Hi, I'm Solomon Sitotaw
         </h1>
         <p class="md:text-lg text-sm">
-          With over 3 years of experience in fullstack development, I specialize
-          in using Vue.js and React for front-end development, alongside Go and
-          Node.js for backend services. I have a strong understanding of
-          microservice architecture and have successfully collaborated with
-          clients from the USA, Ethiopia, and Japan. My exceptional
-          communication and collaboration skills enable me to work effectively
-          within teams and deliver high-quality solutions. I am always eager to
-          learn and adopt new technologies to enhance my skill set and
-          contribute to project success.
+          Results-driven Fullstack & Backend Engineer with 4+ years' experience
+          in Go, Node.js, Vue, and AWS. Recently contributed to LLM projects
+          with OpenAI and Gemini. Passionate about building scalable systems and
+          impactful tools.
         </p>
         <!-- Skills Gained -->
         <div class="h-1 w-16 bg-white_ rounded-xl mt-6"></div>
