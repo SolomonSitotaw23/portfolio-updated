@@ -7,7 +7,7 @@ export const abouts = [
         company: {
           name: 'Turing',
           href: 'https://www.turing.com/',
-          role: 'Software Engineer -LLM Trainer',
+          role: 'Software Engineer - LLM Trainer',
           overview: '',
         },
         icon: 'noto-v1:letter-t',

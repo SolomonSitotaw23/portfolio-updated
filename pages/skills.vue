@@ -59,6 +59,14 @@ const skills = ref([
         title: 'Express',
         icon: 'skill-icons:expressjs-light',
       },
+      {
+        title: 'Nestjs',
+        icon: 'file-icons:nestjs',
+      },
+      {
+        title: 'Reactjs',
+        icon: 'grommet-icons:reactjs',
+      },
     ],
   },
   {
